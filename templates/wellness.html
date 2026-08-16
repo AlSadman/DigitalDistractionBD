@@ -1,0 +1,801 @@
+{% extends "base.html" %}
+
+
+{% block title %}
+Digital Wellness
+{% endblock %}
+
+
+
+{% block content %}
+
+
+<div class="wellness-page">
+
+
+    <!-- ==========================================
+    PAGE HEADER
+    =========================================== -->
+
+    <div class="wellness-header">
+
+        <div class="wellness-header-icon">
+            🌱
+        </div>
+
+        <h1>
+            Digital Wellness Dashboard
+        </h1>
+
+        <p>
+            Practical guidance for healthier digital habits,
+            stronger focus and balanced everyday technology use.
+        </p>
+
+    </div>
+
+
+
+    {% if latest %}
+
+
+    {% set distraction = latest.prediction["Distraction_Level"] %}
+    {% set academic = latest.prediction["Academic_Impact_Level"] %}
+    {% set social = latest.prediction["Social_Impact_Level"] %}
+    {% set focus = latest.prediction["Focus_Level"] %}
+
+
+
+    <!-- ==========================================
+    CURRENT WELLNESS PROFILE
+    =========================================== -->
+
+    <div class="wellness-section-heading">
+
+        <div>
+
+            <span class="section-kicker">
+                LATEST ASSESSMENT
+            </span>
+
+            <h2>
+                Your Current Digital Wellness Profile
+            </h2>
+
+        </div>
+
+        <p>
+            These indicators are based on your most recent
+            behavioural assessment.
+        </p>
+
+    </div>
+
+
+
+    <div class="wellness-grid">
+
+
+        <div class="wellness-card distraction">
+
+            <div class="wellness-card-icon">
+                📱
+            </div>
+
+            <h3>
+                Digital Balance
+            </h3>
+
+            <h2>
+                {{ distraction }}
+            </h2>
+
+            <p>
+                Digital distraction indicator
+            </p>
+
+        </div>
+
+
+
+        <div class="wellness-card academic">
+
+            <div class="wellness-card-icon">
+                📚
+            </div>
+
+            <h3>
+                Academic Balance
+            </h3>
+
+            <h2>
+                {{ academic }}
+            </h2>
+
+            <p>
+                Study behaviour impact
+            </p>
+
+        </div>
+
+
+
+        <div class="wellness-card social">
+
+            <div class="wellness-card-icon">
+                🌐
+            </div>
+
+            <h3>
+                Social Balance
+            </h3>
+
+            <h2>
+                {{ social }}
+            </h2>
+
+            <p>
+                Social interaction impact
+            </p>
+
+        </div>
+
+
+
+        <div class="wellness-card focus">
+
+            <div class="wellness-card-icon">
+                🎯
+            </div>
+
+            <h3>
+                Focus Control
+            </h3>
+
+            <h2>
+                {{ focus }}
+            </h2>
+
+            <p>
+                Self-regulation ability
+            </p>
+
+        </div>
+
+
+    </div>
+
+
+
+
+    <!-- ==========================================
+    ASSESSMENT BASED ACTION PLAN
+    =========================================== -->
+
+    <div class="wellness-section">
+
+        <div class="wellness-section-heading">
+
+            <div>
+
+                <span class="section-kicker">
+                    PERSONAL ACTION PLAN
+                </span>
+
+                <h2>
+                    Priorities Based on Your Assessment
+                </h2>
+
+            </div>
+
+            <p>
+                Small behavioural changes can help create
+                a healthier relationship with digital devices.
+            </p>
+
+        </div>
+
+
+
+        <div class="priority-grid">
+
+
+            <!-- DIGITAL DISTRACTION -->
+
+            <div class="priority-card">
+
+                <div class="priority-icon">
+                    🔕
+                </div>
+
+                <div>
+
+                    <h3>
+                        Distraction Management
+                    </h3>
+
+                    {% if distraction == "High" %}
+
+                    <p>
+                        Your distraction level is high. Create
+                        phone-free study blocks and silence
+                        non-essential notifications during
+                        academic work.
+                    </p>
+
+                    {% elif distraction == "Medium" %}
+
+                    <p>
+                        Your distraction level is moderate.
+                        Monitor unnecessary phone checking and
+                        keep social media outside planned
+                        study periods.
+                    </p>
+
+                    {% else %}
+
+                    <p>
+                        Your distraction level is currently low.
+                        Continue maintaining structured and
+                        intentional device-use habits.
+                    </p>
+
+                    {% endif %}
+
+                </div>
+
+            </div>
+
+
+
+
+            <!-- ACADEMIC -->
+
+            <div class="priority-card">
+
+                <div class="priority-icon">
+                    📝
+                </div>
+
+                <div>
+
+                    <h3>
+                        Academic Routine
+                    </h3>
+
+                    {% if academic == "High" %}
+
+                    <p>
+                        Protect important study sessions from
+                        digital interruptions. Complete priority
+                        academic tasks before entertainment-based
+                        screen activities.
+                    </p>
+
+                    {% elif academic == "Medium" %}
+
+                    <p>
+                        Use a planned study routine and monitor
+                        whether device use is delaying assignments
+                        or reducing preparation time.
+                    </p>
+
+                    {% else %}
+
+                    <p>
+                        Maintain your current academic routine
+                        while continuing to separate focused
+                        study time from recreational device use.
+                    </p>
+
+                    {% endif %}
+
+                </div>
+
+            </div>
+
+
+
+
+            <!-- SOCIAL -->
+
+            <div class="priority-card">
+
+                <div class="priority-icon">
+                    🤝
+                </div>
+
+                <div>
+
+                    <h3>
+                        Social Balance
+                    </h3>
+
+                    {% if social == "High" %}
+
+                    <p>
+                        Create regular offline periods and give
+                        full attention to face-to-face
+                        conversations, family time and social
+                        activities.
+                    </p>
+
+                    {% elif social == "Medium" %}
+
+                    <p>
+                        Maintain awareness of how often online
+                        activities replace direct interaction
+                        with people around you.
+                    </p>
+
+                    {% else %}
+
+                    <p>
+                        Continue maintaining a healthy balance
+                        between online communication and
+                        real-world social interaction.
+                    </p>
+
+                    {% endif %}
+
+                </div>
+
+            </div>
+
+
+
+
+            <!-- FOCUS -->
+
+            <div class="priority-card">
+
+                <div class="priority-icon">
+                    🧠
+                </div>
+
+                <div>
+
+                    <h3>
+                        Focus & Self-Regulation
+                    </h3>
+
+                    {% if focus == "Low" %}
+
+                    <p>
+                        Strengthen focus gradually through short,
+                        uninterrupted study sessions. Keep the
+                        phone outside immediate reach when
+                        concentration is required.
+                    </p>
+
+                    {% elif focus == "Medium" %}
+
+                    <p>
+                        Continue developing concentration by
+                        reducing task switching and completing
+                        one academic activity before checking
+                        digital platforms.
+                    </p>
+
+                    {% else %}
+
+                    <p>
+                        Your focus indicator is strong. Continue
+                        protecting this habit through structured
+                        device use and intentional study routines.
+                    </p>
+
+                    {% endif %}
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+
+
+    <!-- ==========================================
+    EXISTING GENERATED RECOMMENDATIONS
+    =========================================== -->
+
+    {% if latest.recommendations %}
+
+    <div class="assessment-recommendations">
+
+        <div class="recommendation-heading">
+
+            <div class="recommendation-heading-icon">
+                ✨
+            </div>
+
+            <div>
+
+                <span class="section-kicker">
+                    ASSESSMENT GUIDANCE
+                </span>
+
+                <h2>
+                    Recommended Improvement Strategies
+                </h2>
+
+            </div>
+
+        </div>
+
+
+        <div class="recommendation-list-wellness">
+
+            {% for recommendation in latest.recommendations %}
+
+            <div class="wellness-recommendation-item">
+
+                <span class="recommendation-check">
+                    ✓
+                </span>
+
+                <p>
+                    {{ recommendation }}
+                </p>
+
+            </div>
+
+            {% endfor %}
+
+        </div>
+
+    </div>
+
+    {% endif %}
+
+
+
+
+    <!-- ==========================================
+    DIGITAL WELLNESS TOOLKIT
+    =========================================== -->
+
+    <div class="wellness-section">
+
+        <div class="wellness-section-heading">
+
+            <div>
+
+                <span class="section-kicker">
+                    DAILY WELLNESS TOOLKIT
+                </span>
+
+                <h2>
+                    Healthy Digital Habits
+                </h2>
+
+            </div>
+
+            <p>
+                Simple practices for maintaining physical,
+                academic and behavioural balance during
+                regular device use.
+            </p>
+
+        </div>
+
+
+
+        <div class="toolkit-grid">
+
+
+            <div class="toolkit-card">
+
+                <div class="toolkit-icon screen">
+                    👁️
+                </div>
+
+                <h3>
+                    Screen & Eye Comfort
+                </h3>
+
+                <p>
+                    Avoid staring continuously at the screen for
+                    long periods. Look away regularly and allow
+                    your eyes short periods of visual rest.
+                </p>
+
+                <span class="toolkit-tip">
+                    Adjust screen brightness to a comfortable level.
+                </span>
+
+            </div>
+
+
+
+
+            <div class="toolkit-card">
+
+                <div class="toolkit-icon focus-tool">
+                    🎯
+                </div>
+
+                <h3>
+                    Protect Focus Time
+                </h3>
+
+                <p>
+                    Use dedicated study periods where messaging,
+                    social media and entertainment applications
+                    are temporarily avoided.
+                </p>
+
+                <span class="toolkit-tip">
+                    One task at a time reduces unnecessary switching.
+                </span>
+
+            </div>
+
+
+
+
+            <div class="toolkit-card">
+
+                <div class="toolkit-icon sleep">
+                    🌙
+                </div>
+
+                <h3>
+                    Sleep-Friendly Habits
+                </h3>
+
+                <p>
+                    Reduce unnecessary late-night scrolling and
+                    create a calmer transition between digital
+                    activity and sleep time.
+                </p>
+
+                <span class="toolkit-tip">
+                    Keep bedtime separate from endless screen browsing.
+                </span>
+
+            </div>
+
+
+
+
+            <div class="toolkit-card">
+
+                <div class="toolkit-icon break-tool">
+                    ☕
+                </div>
+
+                <h3>
+                    Regular Digital Breaks
+                </h3>
+
+                <p>
+                    Break long periods of screen activity with
+                    brief movement, stretching, water or
+                    non-screen activities.
+                </p>
+
+                <span class="toolkit-tip">
+                    Short breaks can help reset attention.
+                </span>
+
+            </div>
+
+
+
+
+            <div class="toolkit-card">
+
+                <div class="toolkit-icon posture">
+                    🧍
+                </div>
+
+                <h3>
+                    Body & Posture Awareness
+                </h3>
+
+                <p>
+                    Avoid remaining in one position throughout
+                    long study sessions. Arrange your workspace
+                    comfortably and change posture regularly.
+                </p>
+
+                <span class="toolkit-tip">
+                    Combine screen breaks with light movement.
+                </span>
+
+            </div>
+
+
+
+
+            <div class="toolkit-card">
+
+                <div class="toolkit-icon social-tool">
+                    💬
+                </div>
+
+                <h3>
+                    Real-World Connection
+                </h3>
+
+                <p>
+                    Give meaningful offline activities and
+                    face-to-face communication regular space
+                    within your daily routine.
+                </p>
+
+                <span class="toolkit-tip">
+                    Digital connection should not replace every offline interaction.
+                </span>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+
+
+    <!-- ==========================================
+    DAILY CHECKLIST
+    =========================================== -->
+
+    <div class="daily-checklist">
+
+        <div class="checklist-intro">
+
+            <span class="section-kicker">
+                QUICK SELF-CHECK
+            </span>
+
+            <h2>
+                Daily Digital Wellness Checklist
+            </h2>
+
+            <p>
+                Use these questions as a simple reminder
+                during your daily routine.
+            </p>
+
+        </div>
+
+
+        <div class="checklist-items">
+
+
+            <div class="checklist-item">
+
+                <span>✓</span>
+
+                <p>
+                    Did I complete important work before
+                    unnecessary scrolling?
+                </p>
+
+            </div>
+
+
+            <div class="checklist-item">
+
+                <span>✓</span>
+
+                <p>
+                    Did I take regular breaks from continuous
+                    screen activity?
+                </p>
+
+            </div>
+
+
+            <div class="checklist-item">
+
+                <span>✓</span>
+
+                <p>
+                    Did I control notifications during
+                    focused study time?
+                </p>
+
+            </div>
+
+
+            <div class="checklist-item">
+
+                <span>✓</span>
+
+                <p>
+                    Did I spend meaningful time away from
+                    digital devices today?
+                </p>
+
+            </div>
+
+
+            <div class="checklist-item">
+
+                <span>✓</span>
+
+                <p>
+                    Did I maintain a healthy balance between
+                    study, social interaction and online activity?
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+
+
+    <!-- ==========================================
+    INFORMATION NOTE
+    =========================================== -->
+
+    <div class="wellness-note">
+
+        <span>
+            ℹ️
+        </span>
+
+        <p>
+            These suggestions are intended as general digital-wellness
+            guidance based on behavioural assessment results. They are
+            not a substitute for professional medical or psychological advice.
+        </p>
+
+    </div>
+
+
+
+
+    {% else %}
+
+
+
+    <!-- ==========================================
+    EMPTY STATE
+    =========================================== -->
+
+    <div class="wellness-empty-state">
+
+        <div class="empty-wellness-icon">
+            🌱
+        </div>
+
+        <h2>
+            No Assessment Available
+        </h2>
+
+        <p>
+            Complete a digital behaviour assessment first
+            to generate your personalized wellness dashboard.
+        </p>
+
+        <a
+            href="/"
+            class="primary-btn"
+        >
+            Start Assessment
+        </a>
+
+    </div>
+
+
+
+    {% endif %}
+
+
+</div>
+
+
+{% endblock %}

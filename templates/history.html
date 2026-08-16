@@ -1,0 +1,289 @@
+{% extends "base.html" %}
+
+
+{% block title %}
+Assessment History
+{% endblock %}
+
+
+
+
+
+{% block content %}
+
+
+
+<div class="result-header">
+
+
+<h1>
+Prediction History Timeline
+</h1>
+
+
+<p>
+Review previous digital behaviour assessments.
+</p>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="glass-card">
+
+
+{% if records and records|length > 0 %}
+
+
+
+<div class="history-wrapper">
+
+
+
+{% for item in records %}
+
+
+
+<div class="history-item">
+
+
+
+<div class="history-top">
+
+
+<div>
+
+
+<h2>
+
+Assessment #{{item.id}}
+
+</h2>
+
+
+<p>
+
+{{item.date}}
+
+</p>
+
+
+</div>
+
+
+<div class="history-icon">
+
+📊
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="history-results">
+
+
+
+<div class="history-box">
+
+
+<span>
+Distraction
+</span>
+
+
+<h3>
+
+{{item.prediction.Distraction_Level}}
+
+</h3>
+
+
+</div>
+
+
+
+
+
+<div class="history-box">
+
+
+<span>
+Academic
+</span>
+
+
+<h3>
+
+{{item.prediction.Academic_Impact_Level}}
+
+</h3>
+
+
+</div>
+
+
+
+
+
+<div class="history-box">
+
+
+<span>
+Social
+</span>
+
+
+<h3>
+
+{{item.prediction.Social_Impact_Level}}
+
+</h3>
+
+
+</div>
+
+
+
+
+
+<div class="history-box">
+
+
+<span>
+Focus
+</span>
+
+
+<h3>
+
+{{item.prediction.Focus_Level}}
+
+</h3>
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+<div class="recommendation-preview">
+
+
+<h4>
+Recommendations Generated
+</h4>
+
+
+
+<ul>
+
+
+{% for rec in item.recommendations %}
+
+<li>
+
+{{rec}}
+
+</li>
+
+{% endfor %}
+
+
+</ul>
+
+
+
+</div>
+
+
+
+
+
+
+</div>
+
+
+
+{% endfor %}
+
+
+
+</div>
+
+
+
+
+
+{% else %}
+
+
+
+<div class="empty-history">
+
+
+<div class="empty-icon">
+
+📂
+
+</div>
+
+
+
+<h2>
+No Assessment History Available
+</h2>
+
+
+
+<p>
+
+Complete your first assessment to create history records.
+
+</p>
+
+
+
+<a href="/" class="primary-btn">
+
+Start Assessment
+
+</a>
+
+
+
+</div>
+
+
+
+{% endif %}
+
+
+
+</div>
+
+
+
+
+
+
+{% endblock %}

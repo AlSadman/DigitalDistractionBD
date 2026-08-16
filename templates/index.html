@@ -1,0 +1,689 @@
+{% extends "base.html" %}
+
+
+
+{% block title %}
+Digital Behaviour Assessment
+{% endblock %}
+
+
+
+
+
+
+{% block content %}
+
+
+
+<div class="result-header">
+
+
+<h1>
+Digital Behaviour Assessment
+</h1>
+
+
+<p>
+Complete the questionnaire to analyse your digital usage behaviour.
+</p>
+
+
+</div>
+
+
+
+
+
+
+<form method="POST" action="/predict">
+
+
+
+
+
+<!-- ===================================
+ACADEMIC INFORMATION
+=================================== -->
+
+
+<div class="glass-card mb-5">
+
+
+<h2>
+Academic Information
+</h2>
+
+
+<div class="row g-4 mt-3">
+
+
+<div class="col-md-6">
+
+
+<label>
+Current / Average CGPA
+</label>
+
+
+<input
+
+class="form-control"
+
+name="Current/Average CGPA"
+
+type="number"
+
+step="0.01"
+
+placeholder="Example: 3.75"
+
+required>
+
+
+</div>
+
+
+
+
+
+<div class="col-md-6">
+
+
+<label>
+Average Daily Study Hours
+</label>
+
+
+<input
+
+class="form-control"
+
+name="Average Daily Study Hours"
+
+type="number"
+
+step="0.1"
+
+placeholder="Example: 4"
+
+required>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="col-md-6">
+
+
+<label>
+Average Daily Device Usage Time (in hours)
+</label>
+
+
+<input
+
+class="form-control"
+
+name="Average Daily Device Usage Time (in hours)"
+
+type="number"
+
+step="0.1"
+
+placeholder="Example: 6"
+
+required>
+
+
+</div>
+
+
+
+
+
+
+
+
+<div class="col-md-6">
+
+
+<label>
+Primary Study Device
+</label>
+
+
+
+<select
+
+class="form-control"
+
+name="Primary Study Device"
+
+required>
+
+
+<option value="">
+Select device
+</option>
+
+
+<option value="Mobile">
+Mobile
+</option>
+
+
+<option value="PC">
+PC
+</option>
+
+
+<option value="Both">
+Both
+</option>
+
+
+</select>
+
+
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+
+<!-- ===================================
+COMMON QUESTION FUNCTION STYLE
+=================================== -->
+
+
+
+
+
+{% macro question_card(title,name,type="agreement") %}
+
+
+
+<div class="question-box">
+
+
+<h4>
+
+{{title}}
+
+</h4>
+
+
+
+<div class="option-group">
+
+
+
+{% if type=="frequency" %}
+
+
+
+{% for option in [
+"Never",
+"Rarely",
+"Sometimes",
+"Often",
+"Always"
+] %}
+
+
+<label class="radio-card">
+
+
+<input
+
+type="radio"
+
+name="{{name}}"
+
+value="{{option}}"
+
+required>
+
+
+<span>
+
+{{option}}
+
+</span>
+
+
+</label>
+
+
+{% endfor %}
+
+
+
+
+{% else %}
+
+
+
+
+{% for option in [
+
+"Strongly Disagree",
+
+"Disagree",
+
+"Neutral",
+
+"Agree",
+
+"Strongly Agree"
+
+] %}
+
+
+
+<label class="radio-card">
+
+
+<input
+
+type="radio"
+
+name="{{name}}"
+
+value="{{option}}"
+
+required>
+
+
+<span>
+
+{{option}}
+
+</span>
+
+
+</label>
+
+
+
+{% endfor %}
+
+
+
+{% endif %}
+
+
+
+</div>
+
+
+</div>
+
+
+
+{% endmacro %}
+
+
+
+
+
+
+
+
+
+<!-- ===================================
+SECTION A
+=================================== -->
+
+
+<div class="glass-card mb-5">
+
+
+<h2>
+Section A: Digital Distraction Behaviour
+</h2>
+
+
+
+{{question_card(
+
+"I use my smartphone during study time",
+
+"Section A: Digital Distraction Behavior I use my smartphone during study time",
+
+"frequency"
+
+)}}
+
+
+
+
+{{question_card(
+
+"Notifications interrupt my concentration",
+
+"Notifications interrupt my concentration",
+
+"frequency"
+
+)}}
+
+
+
+
+{{question_card(
+
+"I switch between study and social media apps",
+
+"I switch between study and social media apps",
+
+"frequency"
+
+)}}
+
+
+
+
+{{question_card(
+
+"I use social media or video platforms while studying",
+
+"I use social media or video platforms while studying",
+
+"frequency"
+
+)}}
+
+
+
+
+{{question_card(
+
+"I multitask (chat, browse, and study at the same time)",
+
+"I multitask (chat, browse, and study at the same time)",
+
+"frequency"
+
+)}}
+
+
+
+
+{{question_card(
+
+"I lose track of time due to smartphone usage",
+
+"I lose track of time due to smartphone usage",
+
+"frequency"
+
+)}}
+
+
+
+
+{{question_card(
+
+"I postpone academic tasks because of phone usage",
+
+"I postpone academic tasks because of phone usage",
+
+"frequency"
+
+)}}
+
+
+
+</div>
+
+
+
+
+
+
+
+
+<!-- ===================================
+SECTION B
+=================================== -->
+
+
+
+<div class="glass-card mb-5">
+
+
+<h2>
+Section B: Academic Performance Impact
+</h2>
+
+
+
+{{question_card(
+
+"Smartphone usage negatively affects my academic performance",
+
+"Section B: Academic Performance Impact Smartphone usage negatively affects my academic performance"
+
+)}}
+
+
+
+{{question_card(
+
+"I fail to complete study tasks on time due to digital distractions",
+
+"I fail to complete study tasks on time due to digital distractions"
+
+)}}
+
+
+
+
+{{question_card(
+
+"My exam preparation is affected by excessive phone use",
+
+"My exam preparation is affected by excessive phone use"
+
+)}}
+
+
+
+
+{{question_card(
+
+"I feel mentally exhausted after prolonged digital usage",
+
+"I feel mentally exhausted after prolonged digital usage"
+
+)}}
+
+
+
+</div>
+
+
+
+
+
+
+
+
+<!-- ===================================
+SECTION C
+=================================== -->
+
+
+<div class="glass-card mb-5">
+
+
+<h2>
+Section C: Social Impact
+</h2>
+
+
+
+{{question_card(
+
+"Smartphone usage reduces my face-to-face interactions",
+
+"Section C: Social Impact  Smartphone usage reduces my face-to-face interactions"
+
+)}}
+
+
+
+
+{{question_card(
+
+"Excessive phone usage affects my social relationships",
+
+"Excessive phone usage affects my social relationships"
+
+)}}
+
+
+
+
+{{question_card(
+
+"I feel anxious when I am disconnected from the internet",
+
+"I feel anxious when I am disconnected from the internet"
+
+)}}
+
+
+
+
+{{question_card(
+
+"Smartphone usage disturbs my sleep pattern",
+
+"Smartphone usage disturbs my sleep pattern"
+
+)}}
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+<!-- ===================================
+SECTION D
+=================================== -->
+
+
+<div class="glass-card mb-5">
+
+
+<h2>
+Section D: Focus & Self-Regulation
+</h2>
+
+
+
+
+{{question_card(
+
+"I can focus for long periods without checking my phone",
+
+"Section D: Focus & Self-Regulation I can focus for long periods without checking my phone"
+
+)}}
+
+
+
+
+{{question_card(
+
+"I can study efficiently without digital interruptions",
+
+"I can study efficiently without digital interruptions"
+
+)}}
+
+
+
+
+{{question_card(
+
+"I can control my smartphone usage while studying",
+
+"I can control my smartphone usage while studying"
+
+)}}
+
+
+
+
+{{question_card(
+
+"I can stay focused while studying even with digital distractions.",
+
+"I can stay focused while studying even with digital distractions."
+
+)}}
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<div class="text-center mb-5">
+
+
+<button
+
+class="primary-btn"
+
+type="submit">
+
+
+Analyse My Behaviour
+
+
+</button>
+
+
+</div>
+
+
+
+
+</form>
+
+
+
+{% endblock %}

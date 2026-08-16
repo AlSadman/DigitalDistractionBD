@@ -1,0 +1,522 @@
+/* =========================================================
+RESEARCH ANALYTICS PAGE
+========================================================= */
+
+
+.research-container{
+
+    max-width:1400px;
+
+    margin:auto;
+
+    padding:45px;
+
+}
+
+
+
+/* =========================================================
+HEADER
+========================================================= */
+
+
+.research-header{
+
+    text-align:center;
+
+    margin-bottom:45px;
+
+}
+
+
+.research-header h1{
+
+    font-size:46px;
+
+    font-weight:750;
+
+    margin-bottom:12px;
+
+    background:
+    linear-gradient(
+        90deg,
+        #38bdf8,
+        #818cf8,
+        #34d399
+    );
+
+    -webkit-background-clip:text;
+
+    color:transparent;
+
+}
+
+
+
+.research-header p{
+
+    color:#94a3b8;
+
+    font-size:18px;
+
+}
+
+
+
+
+
+
+/* =========================================================
+COMMON RESEARCH CARD
+========================================================= */
+
+
+.research-card{
+
+    padding:35px;
+
+    margin-bottom:30px;
+
+    border-radius:28px;
+
+
+    background:
+    linear-gradient(
+        145deg,
+        rgba(255,255,255,.09),
+        rgba(255,255,255,.045)
+    );
+
+
+    border:
+    1px solid rgba(255,255,255,.12);
+
+
+    backdrop-filter:blur(18px);
+
+
+    transition:.3s ease;
+
+}
+
+
+
+.research-card:hover{
+
+    transform:translateY(-5px);
+
+    border-color:
+    rgba(56,189,248,.35);
+
+}
+
+
+
+.card-icon{
+
+    width:55px;
+
+    height:55px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+
+    font-size:27px;
+
+
+    border-radius:18px;
+
+
+    margin-bottom:20px;
+
+
+    background:
+    rgba(56,189,248,.12);
+
+}
+
+
+
+.research-card h2{
+
+    font-size:28px;
+
+    margin-bottom:15px;
+
+}
+
+
+
+.research-card p{
+
+    color:#cbd5e1;
+
+    font-size:16px;
+
+    line-height:1.8;
+
+}
+
+
+
+
+
+/* =========================================================
+SECTION TITLE
+========================================================= */
+
+
+.section-title{
+
+    font-size:30px;
+
+    margin:
+
+    50px 0 25px;
+
+    font-weight:700;
+
+}
+
+
+
+
+
+
+
+/* =========================================================
+OBJECTIVES
+========================================================= */
+
+
+.objective-grid{
+
+    display:grid;
+
+
+    grid-template-columns:
+
+    repeat(3,1fr);
+
+
+    gap:25px;
+
+
+}
+
+
+
+.objective-card{
+
+    padding:30px;
+
+
+    border-radius:25px;
+
+
+    background:
+    rgba(255,255,255,.055);
+
+
+    border:
+    1px solid rgba(255,255,255,.10);
+
+
+    transition:.3s ease;
+
+}
+
+
+
+.objective-card:hover{
+
+    transform:translateY(-7px);
+
+
+    background:
+    rgba(255,255,255,.08);
+
+}
+
+
+
+.objective-icon{
+
+    width:55px;
+
+    height:55px;
+
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+
+    font-size:28px;
+
+
+    border-radius:18px;
+
+
+    margin-bottom:20px;
+
+
+    background:
+    rgba(129,140,248,.15);
+
+}
+
+
+
+.objective-card h3{
+
+    color:#38bdf8;
+
+    font-size:16px;
+
+    margin-bottom:10px;
+
+}
+
+
+
+.objective-card h4{
+
+    font-size:21px;
+
+    margin-bottom:12px;
+
+}
+
+
+
+.objective-card p{
+
+    color:#cbd5e1;
+
+    line-height:1.7;
+
+    font-size:15px;
+
+}
+
+
+
+
+
+
+
+/* =========================================================
+PREDICTION DIMENSIONS
+========================================================= */
+
+
+.dimension-grid{
+
+    display:grid;
+
+
+    grid-template-columns:
+
+    repeat(4,1fr);
+
+
+    gap:22px;
+
+
+}
+
+
+
+.dimension-card{
+
+    text-align:center;
+
+
+    padding:28px;
+
+
+    border-radius:24px;
+
+
+    background:
+    rgba(255,255,255,.055);
+
+
+    border:
+    1px solid rgba(255,255,255,.10);
+
+
+    transition:.3s ease;
+
+
+}
+
+
+
+.dimension-card:hover{
+
+    transform:translateY(-6px);
+
+
+}
+
+
+
+.dimension-card span{
+
+    display:block;
+
+
+    font-size:35px;
+
+
+    margin-bottom:18px;
+
+
+}
+
+
+
+.dimension-card h3{
+
+    font-size:19px;
+
+
+    margin-bottom:12px;
+
+
+}
+
+
+
+.dimension-card p{
+
+    color:#94a3b8;
+
+
+    line-height:1.6;
+
+
+    font-size:14px;
+
+
+}
+
+
+
+
+
+/* =========================================================
+CONTRIBUTION
+========================================================= */
+
+
+.contribution{
+
+    margin-top:50px;
+
+
+    background:
+
+    linear-gradient(
+
+        135deg,
+
+        rgba(37,99,235,.12),
+
+        rgba(16,185,129,.10)
+
+    );
+
+}
+
+
+
+
+
+/* =========================================================
+RESPONSIVE
+========================================================= */
+
+
+
+@media(max-width:1200px){
+
+
+    .dimension-grid{
+
+
+        grid-template-columns:
+
+        repeat(2,1fr);
+
+
+    }
+
+
+
+}
+
+
+
+@media(max-width:900px){
+
+
+    .objective-grid{
+
+
+        grid-template-columns:
+
+        1fr;
+
+
+    }
+
+
+
+    .research-container{
+
+
+        padding:25px;
+
+
+    }
+
+
+
+}
+
+
+
+@media(max-width:600px){
+
+
+    .dimension-grid{
+
+
+        grid-template-columns:
+
+        1fr;
+
+
+    }
+
+
+
+    .research-header h1{
+
+
+        font-size:34px;
+
+
+    }
+
+
+}

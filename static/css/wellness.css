@@ -1,0 +1,1009 @@
+/* =========================================================
+DIGITAL WELLNESS DASHBOARD
+========================================================= */
+
+
+.wellness-page{
+
+    padding:50px;
+
+    max-width:1600px;
+
+    margin:auto;
+
+}
+
+
+
+/* =========================================================
+HEADER
+========================================================= */
+
+
+.wellness-header{
+
+    text-align:center;
+
+    margin-bottom:50px;
+
+}
+
+
+.wellness-header-icon{
+
+    width:65px;
+
+    height:65px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    margin:0 auto 18px;
+
+    border-radius:20px;
+
+    font-size:30px;
+
+    background:
+    linear-gradient(
+        135deg,
+        rgba(52,211,153,.22),
+        rgba(56,189,248,.18)
+    );
+
+    border:
+    1px solid rgba(255,255,255,.12);
+
+}
+
+
+.wellness-header h1{
+
+    font-size:46px;
+
+    font-weight:700;
+
+    margin-bottom:12px;
+
+    background:
+    linear-gradient(
+        90deg,
+        #38bdf8,
+        #818cf8,
+        #34d399
+    );
+
+    -webkit-background-clip:text;
+
+    color:transparent;
+
+}
+
+
+.wellness-header p{
+
+    color:#94a3b8;
+
+    font-size:17px;
+
+    max-width:760px;
+
+    margin:auto;
+
+    line-height:1.7;
+
+}
+
+
+
+/* =========================================================
+SECTION HEADINGS
+========================================================= */
+
+
+.wellness-section{
+
+    margin-top:55px;
+
+}
+
+
+.wellness-section-heading{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:flex-end;
+
+    gap:30px;
+
+    margin-bottom:25px;
+
+}
+
+
+.wellness-section-heading h2{
+
+    font-size:28px;
+
+    margin:5px 0 0;
+
+    font-weight:700;
+
+}
+
+
+.wellness-section-heading p{
+
+    color:#94a3b8;
+
+    max-width:520px;
+
+    margin:0;
+
+    line-height:1.6;
+
+}
+
+
+.section-kicker{
+
+    display:block;
+
+    color:#38bdf8;
+
+    font-size:12px;
+
+    font-weight:700;
+
+    letter-spacing:1.8px;
+
+}
+
+
+
+/* =========================================================
+CURRENT WELLNESS PROFILE
+========================================================= */
+
+
+.wellness-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(4,1fr);
+
+    gap:22px;
+
+}
+
+
+.wellness-card{
+
+    position:relative;
+
+    overflow:hidden;
+
+    min-height:200px;
+
+    padding:30px;
+
+    text-align:center;
+
+    border-radius:25px;
+
+    background:
+    linear-gradient(
+        145deg,
+        rgba(255,255,255,.09),
+        rgba(255,255,255,.045)
+    );
+
+    border:
+    1px solid rgba(255,255,255,.13);
+
+    backdrop-filter:blur(18px);
+
+    transition:
+    transform .3s ease,
+    border-color .3s ease;
+
+}
+
+
+.wellness-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:130px;
+
+    height:130px;
+
+    border-radius:50%;
+
+    top:-65px;
+
+    right:-45px;
+
+    background:
+    rgba(56,189,248,.08);
+
+}
+
+
+.wellness-card:hover{
+
+    transform:translateY(-6px);
+
+    border-color:
+    rgba(56,189,248,.35);
+
+}
+
+
+.wellness-card-icon{
+
+    font-size:30px;
+
+    margin-bottom:15px;
+
+}
+
+
+.wellness-card h3{
+
+    font-size:19px;
+
+    font-weight:650;
+
+    margin-bottom:10px;
+
+}
+
+
+.wellness-card h2{
+
+    font-size:36px;
+
+    margin:10px 0;
+
+    font-weight:750;
+
+}
+
+
+.wellness-card p{
+
+    color:#94a3b8;
+
+    margin:0;
+
+    font-size:14px;
+
+}
+
+
+.distraction h2{
+
+    color:#fb7185;
+
+}
+
+
+.academic h2{
+
+    color:#fbbf24;
+
+}
+
+
+.social h2{
+
+    color:#60a5fa;
+
+}
+
+
+.focus h2{
+
+    color:#34d399;
+
+}
+
+
+
+/* =========================================================
+PRIORITY ACTION PLAN
+========================================================= */
+
+
+.priority-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(2,1fr);
+
+    gap:20px;
+
+}
+
+
+.priority-card{
+
+    display:flex;
+
+    align-items:flex-start;
+
+    gap:20px;
+
+    padding:26px;
+
+    border-radius:22px;
+
+    background:
+    rgba(255,255,255,.055);
+
+    border:
+    1px solid rgba(255,255,255,.10);
+
+    transition:.3s ease;
+
+}
+
+
+.priority-card:hover{
+
+    background:
+    rgba(255,255,255,.085);
+
+    transform:
+    translateY(-4px);
+
+}
+
+
+.priority-icon{
+
+    min-width:52px;
+
+    width:52px;
+
+    height:52px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:17px;
+
+    font-size:24px;
+
+    background:
+    rgba(56,189,248,.12);
+
+    border:
+    1px solid rgba(56,189,248,.18);
+
+}
+
+
+.priority-card h3{
+
+    font-size:19px;
+
+    margin-bottom:8px;
+
+}
+
+
+.priority-card p{
+
+    color:#cbd5e1;
+
+    line-height:1.7;
+
+    margin:0;
+
+}
+
+
+
+/* =========================================================
+ASSESSMENT RECOMMENDATIONS
+========================================================= */
+
+
+.assessment-recommendations{
+
+    margin-top:55px;
+
+    padding:32px;
+
+    border-radius:25px;
+
+    background:
+    linear-gradient(
+        135deg,
+        rgba(37,99,235,.11),
+        rgba(124,58,237,.08)
+    );
+
+    border:
+    1px solid rgba(96,165,250,.18);
+
+}
+
+
+.recommendation-heading{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+    margin-bottom:25px;
+
+}
+
+
+.recommendation-heading-icon{
+
+    width:55px;
+
+    height:55px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    border-radius:17px;
+
+    font-size:25px;
+
+    background:
+    rgba(129,140,248,.15);
+
+}
+
+
+.recommendation-heading h2{
+
+    margin:4px 0 0;
+
+    font-size:26px;
+
+}
+
+
+.recommendation-list-wellness{
+
+    display:grid;
+
+    gap:12px;
+
+}
+
+
+.wellness-recommendation-item{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    padding:17px 20px;
+
+    border-radius:16px;
+
+    background:
+    rgba(255,255,255,.055);
+
+    border:
+    1px solid rgba(255,255,255,.08);
+
+}
+
+
+.recommendation-check{
+
+    width:28px;
+
+    height:28px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    border-radius:50%;
+
+    background:
+    rgba(52,211,153,.15);
+
+    color:#34d399;
+
+    font-weight:800;
+
+}
+
+
+.wellness-recommendation-item p{
+
+    margin:0;
+
+    color:#dbeafe;
+
+}
+
+
+
+/* =========================================================
+DIGITAL WELLNESS TOOLKIT
+========================================================= */
+
+
+.toolkit-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(3,1fr);
+
+    gap:20px;
+
+}
+
+
+.toolkit-card{
+
+    padding:28px;
+
+    min-height:265px;
+
+    border-radius:24px;
+
+    background:
+    rgba(255,255,255,.055);
+
+    border:
+    1px solid rgba(255,255,255,.10);
+
+    transition:.3s ease;
+
+}
+
+
+.toolkit-card:hover{
+
+    transform:
+    translateY(-5px);
+
+    background:
+    rgba(255,255,255,.08);
+
+}
+
+
+.toolkit-icon{
+
+    width:52px;
+
+    height:52px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    margin-bottom:20px;
+
+    border-radius:16px;
+
+    font-size:24px;
+
+    background:
+    rgba(56,189,248,.12);
+
+}
+
+
+.toolkit-card h3{
+
+    font-size:19px;
+
+    margin-bottom:12px;
+
+}
+
+
+.toolkit-card p{
+
+    color:#aebed1;
+
+    line-height:1.7;
+
+    min-height:85px;
+
+}
+
+
+.toolkit-tip{
+
+    display:block;
+
+    margin-top:18px;
+
+    padding-top:15px;
+
+    border-top:
+    1px solid rgba(255,255,255,.08);
+
+    color:#7dd3fc;
+
+    font-size:13px;
+
+    line-height:1.5;
+
+}
+
+
+.sleep{
+
+    background:
+    rgba(129,140,248,.15);
+
+}
+
+
+.break-tool{
+
+    background:
+    rgba(251,191,36,.12);
+
+}
+
+
+.posture{
+
+    background:
+    rgba(52,211,153,.12);
+
+}
+
+
+.social-tool{
+
+    background:
+    rgba(244,114,182,.12);
+
+}
+
+
+
+/* =========================================================
+DAILY CHECKLIST
+========================================================= */
+
+
+.daily-checklist{
+
+    margin-top:55px;
+
+    display:grid;
+
+    grid-template-columns:
+    .8fr 1.5fr;
+
+    gap:35px;
+
+    padding:35px;
+
+    border-radius:28px;
+
+    background:
+    linear-gradient(
+        135deg,
+        rgba(15,118,110,.13),
+        rgba(37,99,235,.08)
+    );
+
+    border:
+    1px solid rgba(52,211,153,.15);
+
+}
+
+
+.checklist-intro h2{
+
+    margin:6px 0 12px;
+
+    font-size:27px;
+
+}
+
+
+.checklist-intro p{
+
+    color:#94a3b8;
+
+    line-height:1.6;
+
+}
+
+
+.checklist-items{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:12px;
+
+}
+
+
+.checklist-item{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:14px;
+
+    padding:14px 17px;
+
+    border-radius:15px;
+
+    background:
+    rgba(255,255,255,.05);
+
+}
+
+
+.checklist-item span{
+
+    width:28px;
+
+    height:28px;
+
+    flex-shrink:0;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:50%;
+
+    color:#34d399;
+
+    background:
+    rgba(52,211,153,.13);
+
+    font-weight:800;
+
+}
+
+
+.checklist-item p{
+
+    margin:0;
+
+    color:#d1d9e6;
+
+}
+
+
+
+/* =========================================================
+INFORMATION NOTE
+========================================================= */
+
+
+.wellness-note{
+
+    display:flex;
+
+    align-items:flex-start;
+
+    gap:14px;
+
+    margin-top:30px;
+
+    padding:18px 22px;
+
+    border-radius:17px;
+
+    background:
+    rgba(148,163,184,.07);
+
+    border:
+    1px solid rgba(148,163,184,.12);
+
+}
+
+
+.wellness-note span{
+
+    font-size:20px;
+
+}
+
+
+.wellness-note p{
+
+    margin:0;
+
+    color:#94a3b8;
+
+    font-size:13px;
+
+    line-height:1.6;
+
+}
+
+
+
+/* =========================================================
+EMPTY STATE
+========================================================= */
+
+
+.wellness-empty-state{
+
+    max-width:650px;
+
+    margin:80px auto;
+
+    padding:55px;
+
+    text-align:center;
+
+    border-radius:30px;
+
+    background:
+    rgba(255,255,255,.055);
+
+    border:
+    1px solid rgba(255,255,255,.10);
+
+}
+
+
+.empty-wellness-icon{
+
+    font-size:55px;
+
+    margin-bottom:20px;
+
+}
+
+
+.wellness-empty-state h2{
+
+    margin-bottom:12px;
+
+}
+
+
+.wellness-empty-state p{
+
+    color:#94a3b8;
+
+    margin-bottom:30px;
+
+}
+
+
+
+/* =========================================================
+RESPONSIVE DESIGN
+========================================================= */
+
+
+@media(max-width:1200px){
+
+
+    .wellness-grid{
+
+        grid-template-columns:
+        repeat(2,1fr);
+
+    }
+
+
+    .toolkit-grid{
+
+        grid-template-columns:
+        repeat(2,1fr);
+
+    }
+
+}
+
+
+
+@media(max-width:900px){
+
+
+    .wellness-page{
+
+        padding:25px;
+
+    }
+
+
+    .wellness-section-heading{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+    }
+
+
+    .priority-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+
+    .daily-checklist{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
+
+
+
+@media(max-width:650px){
+
+
+    .wellness-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+
+    .toolkit-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+
+    .wellness-header h1{
+
+        font-size:34px;
+
+    }
+
+
+    .priority-card{
+
+        flex-direction:column;
+
+    }
+
+}

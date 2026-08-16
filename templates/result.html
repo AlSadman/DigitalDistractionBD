@@ -1,0 +1,525 @@
+{% extends "base.html" %}
+
+
+{% block title %}
+Behaviour Analysis Result
+{% endblock %}
+
+
+
+{% block extra_css %}
+
+<link rel="stylesheet"
+href="{{ url_for('static',
+filename='css/result_dashboard.css') }}">
+
+{% endblock %}
+
+
+
+
+
+{% block content %}
+
+
+<div class="result-page">
+
+
+
+<section class="result-header-new">
+
+
+<h1>
+Your Behaviour Analysis Result
+</h1>
+
+
+<p>
+Digital behaviour assessment generated from your questionnaire responses.
+</p>
+
+
+</section>
+
+
+
+
+
+<section class="result-grid-new">
+
+
+
+
+
+<!-- DISTRACTION -->
+
+
+<div class="result-card-new distraction">
+
+
+<div class="category-icon">
+📱
+</div>
+
+
+<h3>
+Digital Distraction
+</h3>
+
+
+<div class="level">
+
+{{result.distraction}}
+
+</div>
+
+
+<div class="circle-score">
+
+
+<div class="circle-number">
+
+{% if result.distraction=="High" %}
+85%
+{% elif result.distraction=="Medium" %}
+55%
+{% else %}
+25%
+{% endif %}
+
+
+</div>
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+
+<!-- ACADEMIC -->
+
+
+<div class="result-card-new academic">
+
+
+<div class="category-icon">
+📚
+</div>
+
+
+<h3>
+Academic Impact
+</h3>
+
+
+<div class="level">
+
+{{result.academic}}
+
+</div>
+
+
+
+<div class="circle-score">
+
+
+<div class="circle-number">
+
+
+{% if result.academic=="High" %}
+85%
+{% elif result.academic=="Medium" %}
+55%
+{% else %}
+25%
+{% endif %}
+
+
+</div>
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+
+<!-- SOCIAL -->
+
+
+<div class="result-card-new social">
+
+
+<div class="category-icon">
+🌐
+</div>
+
+
+<h3>
+Social Impact
+</h3>
+
+
+<div class="level">
+
+{{result.social}}
+
+</div>
+
+
+
+<div class="circle-score">
+
+
+<div class="circle-number">
+
+
+{% if result.social=="High" %}
+85%
+{% elif result.social=="Medium" %}
+55%
+{% else %}
+25%
+{% endif %}
+
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+
+<!-- FOCUS -->
+
+
+<div class="result-card-new focus">
+
+
+<div class="category-icon">
+🎯
+</div>
+
+
+<h3>
+Focus Level
+</h3>
+
+
+<div class="level">
+
+{{result.focus}}
+
+</div>
+
+
+
+<div class="circle-score">
+
+
+<div class="circle-number">
+
+
+{% if result.focus=="High" %}
+85%
+{% elif result.focus=="Medium" %}
+55%
+{% else %}
+25%
+{% endif %}
+
+
+</div>
+
+
+</div>
+
+
+
+</div>
+
+
+
+</section>
+
+
+
+
+
+
+
+
+<section class="visual-section">
+
+
+<h2>
+Behaviour Profile Visualization
+</h2>
+
+
+
+<div class="chart-wrapper">
+
+<canvas id="resultChart"></canvas>
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<section class="info-section">
+
+
+<h2>
+Assessment Summary
+</h2>
+
+
+<p>
+
+{{summary}}
+
+</p>
+
+
+</section>
+
+
+
+
+
+
+
+
+<section class="info-section">
+
+
+<h2>
+Suggested Improvement Strategies
+</h2>
+
+
+
+<div class="recommend-list">
+
+
+{% for item in recommendations %}
+
+
+<div class="recommend-box">
+
+✓ {{item}}
+
+</div>
+
+
+{% endfor %}
+
+
+</div>
+
+
+</section>
+
+
+
+
+</div>
+
+
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
+
+<script>
+
+
+function convertLevel(value){
+
+
+if(value==="High"){
+return 85;
+}
+
+
+if(value==="Medium"){
+return 55;
+}
+
+
+if(value==="Low"){
+return 25;
+}
+
+
+return 50;
+
+
+}
+
+
+
+const dataValues=[
+
+
+convertLevel("{{result.distraction}}"),
+
+
+convertLevel("{{result.academic}}"),
+
+
+convertLevel("{{result.social}}"),
+
+
+convertLevel("{{result.focus}}")
+
+
+];
+
+
+
+
+
+
+new Chart(
+
+document.getElementById(
+"resultChart"
+),
+
+
+{
+
+
+type:"radar",
+
+
+
+data:{
+
+
+labels:[
+
+"Digital Distraction",
+
+"Academic Impact",
+
+"Social Impact",
+
+"Focus Level"
+
+],
+
+
+
+datasets:[{
+
+
+label:"Behaviour Profile",
+
+
+data:dataValues,
+
+
+borderWidth:3,
+
+
+fill:true
+
+
+}]
+
+
+},
+
+
+
+
+
+options:{
+
+
+responsive:true,
+
+
+maintainAspectRatio:false,
+
+
+scales:{
+
+
+r:{
+
+
+beginAtZero:true,
+
+max:100,
+
+
+ticks:{
+
+
+display:false
+
+
+}
+
+
+}
+
+
+}
+
+
+
+}
+
+
+}
+
+
+
+);
+
+
+
+</script>
+
+
+
+
+{% endblock %}
