@@ -1385,3 +1385,58 @@ grid-template-columns:1fr;
 
 
 }
+
+
+/* =======================================================
+   LIGHT THEME — Dashboard & Component overrides
+   Applied when <html data-theme="light">
+======================================================= */
+
+/* Dashboard cards */
+[data-theme="light"] .dashboard-card::before {
+    background: rgba(108, 99, 255, 0.06);
+}
+
+/* Stat numbers — purple/dark gradient for light bg */
+[data-theme="light"] .stat-number {
+    background: linear-gradient(135deg, #1a1a2e, #6c63ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+[data-theme="light"] .stat-label {
+    color: rgba(26, 26, 46, 0.60);
+}
+
+/* Prediction cards */
+[data-theme="light"] .prediction-card {
+    background: rgba(255, 255, 255, 0.95);
+    border: 1px solid rgba(108, 99, 255, 0.18);
+    box-shadow: 0 8px 32px rgba(108, 99, 255, 0.10);
+}
+
+[data-theme="light"] .prediction-card h3 {
+    color: rgba(26, 26, 46, 0.75);
+}
+
+/* Recommendation items */
+[data-theme="light"] .recommendation-item {
+    background: rgba(255, 255, 255, 0.90);
+    border: 1px solid rgba(108, 99, 255, 0.14);
+}
+
+/* Table overrides for history page */
+[data-theme="light"] .table {
+    color: #1a1a2e;
+}
+
+[data-theme="light"] .table > thead > tr > th,
+[data-theme="light"] .table > tbody > tr > td {
+    border-color: rgba(108, 99, 255, 0.12);
+    color: #1a1a2e;
+}
+
+[data-theme="light"] .table-striped > tbody > tr:nth-of-type(odd) > * {
+    background-color: rgba(108, 99, 255, 0.04);
+    color: #1a1a2e;
+}

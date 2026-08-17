@@ -75,6 +75,9 @@ html {
 
     scroll-behavior:smooth;
 
+    /* Smooth theme transition on root */
+    transition: background 0.4s ease, color 0.4s ease;
+
 }
 
 
@@ -799,3 +802,155 @@ grid-template-columns:1fr;
 
 
 }
+
+
+
+
+/* =======================================================
+   LIGHT THEME — overrides all dark CSS custom properties
+   Applied when <html data-theme="light">
+======================================================= */
+
+[data-theme="light"] {
+
+    --bg-main:       #f0f4ff;
+    --bg-secondary:  #ffffff;
+    --glass:         rgba(255, 255, 255, 0.88);
+    --glass-border:  rgba(108, 99, 255, 0.18);
+    --primary:       #6c63ff;
+    --secondary:     #0099cc;
+    --text-main:     #1a1a2e;
+    --text-soft:     rgba(26, 26, 46, 0.65);
+    --shadow:        0 20px 50px rgba(108, 99, 255, 0.13);
+
+}
+
+
+/* Light mode — orb pastel tones */
+[data-theme="light"] .orb {
+    opacity: 0.18;
+}
+
+[data-theme="light"] .orb-one  { background: #a89cff; }
+[data-theme="light"] .orb-two  { background: #5fd3f3; }
+[data-theme="light"] .orb-three{ background: #f7a8e0; }
+
+
+/* Light mode — hero h1 gradient uses dark ink instead of white */
+[data-theme="light"] .hero-text h1 {
+    background: linear-gradient(90deg, #1a1a2e, #6c63ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+/* Light mode — feature row tiles */
+[data-theme="light"] .feature-row div {
+    background: rgba(108, 99, 255, 0.07);
+    color: #1a1a2e;
+}
+
+
+/* Light mode — form controls */
+[data-theme="light"] .form-control {
+    background:    rgba(108, 99, 255, 0.06);
+    border-color:  rgba(108, 99, 255, 0.25);
+    color:         #1a1a2e;
+}
+
+[data-theme="light"] .form-control:focus {
+    background:   rgba(108, 99, 255, 0.10);
+    color:        #1a1a2e;
+    border-color: #6c63ff;
+    box-shadow: none;
+}
+
+[data-theme="light"] label {
+    color: rgba(26, 26, 46, 0.85);
+}
+
+
+/* Light mode — glass-card hover border */
+[data-theme="light"] .glass-card:hover {
+    border-color: rgba(108, 99, 255, 0.4);
+}
+
+
+/* Light mode — status pill */
+[data-theme="light"] .status-pill {
+    background: rgba(0, 200, 130, 0.12);
+    color: #009966;
+}
+
+
+/* =======================================================
+   THEME TOGGLE BUTTON
+   Floating pill in bottom-right corner
+======================================================= */
+
+.theme-toggle {
+    position: fixed;
+    bottom: 28px;
+    right: 28px;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    gap: 0;
+    background: var(--glass);
+    border: 1px solid var(--glass-border);
+    backdrop-filter: blur(20px);
+    border-radius: 50px;
+    padding: 6px;
+    box-shadow: var(--shadow);
+    transition: all 0.4s ease;
+}
+
+.theme-toggle-btn {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 40px;
+    background: transparent;
+    color: var(--text-soft);
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.35s ease;
+    font-family: "Inter", sans-serif;
+    white-space: nowrap;
+}
+
+.theme-toggle-btn.active {
+    background: linear-gradient(135deg, #6c63ff, #00aacc);
+    color: #ffffff;
+    box-shadow: 0 6px 20px rgba(108, 99, 255, 0.4);
+}
+
+.theme-toggle-btn .btn-icon {
+    font-size: 16px;
+    display: inline-block;
+    transition: transform 0.4s ease;
+}
+
+.theme-toggle-btn.active .btn-icon {
+    transform: rotate(20deg);
+}
+
+/* Smooth transition for ALL color-related properties */
+body,
+.sidebar,
+.topbar,
+.glass-card,
+.form-control,
+.status-pill,
+.feature-row div,
+.theme-toggle {
+    transition:
+        background 0.4s ease,
+        background-color 0.4s ease,
+        border-color 0.4s ease,
+        color 0.4s ease,
+        box-shadow 0.4s ease;
+}
