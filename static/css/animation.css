@@ -1,317 +1,91 @@
-/*
-=====================================================
-SMOOTH ANIMATION ENGINE
-=====================================================
-*/
-
-
-
-
+/* =====================================================
+   SMOOTH ANIMATION ENGINE - LIGHT THEME
+===================================================== */
 
 /* PAGE ENTRY */
-
-
 .page-content {
-
-
-animation:
-
-pageEnter .7s ease;
-
-
+    animation: pageEnter 0.6s cubic-bezier(0.16, 1, 0.3, 1);
 }
-
-
 
 @keyframes pageEnter {
-
-
-from{
-
-
-opacity:0;
-
-
-transform:
-
-translateY(20px);
-
-
+    from {
+        opacity: 0;
+        transform: translateY(16px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
-
-to{
-
-
-opacity:1;
-
-
-transform:
-
-translateY(0);
-
-
+/* FLOATING HERO */
+.hero-card, .floating-card {
+    animation: floating 6s ease-in-out infinite;
 }
-
-
-
-}
-
-
-
-
-
-
-
-/* FLOATING EFFECT */
-
-
-
-.hero-card {
-
-
-animation:
-
-floating 5s ease-in-out infinite;
-
-
-}
-
-
-
-
 
 @keyframes floating {
-
-
-0%,100%{
-
-
-transform:
-
-translateY(0);
-
-
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-8px);
+    }
 }
 
-
-50%{
-
-
-transform:
-
-translateY(-15px);
-
-
-}
-
-
-}
-
-
-
-
-
-
-
-
-/* CARD APPEAR */
-
-
-
+/* CARD REVEAL */
 .glass-card {
-
-
-animation:
-
-cardReveal .6s ease;
-
-
+    animation: cardReveal 0.5s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-
-
-
-
-@keyframes cardReveal{
-
-
-from{
-
-
-opacity:0;
-
-
-transform:
-
-scale(.95);
-
-
+@keyframes cardReveal {
+    from {
+        opacity: 0;
+        transform: scale(0.98);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
 }
 
-
-to{
-
-
-opacity:1;
-
-
-transform:
-
-scale(1);
-
-
-}
-
-
-
-}
-
-
-
-
-
-
-
-/* BUTTON EFFECT */
-
-
+/* BUTTON SHIMMER */
 .primary-btn {
-
-
-position:relative;
-
-
-overflow:hidden;
-
-
+    position: relative;
+    overflow: hidden;
 }
-
-
-
 
 .primary-btn::after {
-
-
-content:"";
-
-
-position:absolute;
-
-
-top:0;
-
-
-left:-100%;
-
-
-width:100%;
-
-
-height:100%;
-
-
-background:
-
-linear-gradient(
-
-120deg,
-
-transparent,
-
-rgba(255,255,255,.4),
-
-transparent
-
-);
-
-
-
-transition:.5s;
-
-
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        120deg,
+        transparent,
+        rgba(255, 255, 255, 0.35),
+        transparent
+    );
+    transition: 0.6s ease;
 }
-
-
-
 
 .primary-btn:hover::after {
-
-
-left:100%;
-
-
+    left: 100%;
 }
 
-
-
-
-
-
-
-/* SIDEBAR ENTRY */
-
-
-
+/* SIDEBAR LOAD */
 .sidebar {
-
-
-animation:
-
-sidebarLoad .8s ease;
-
-
+    animation: sidebarLoad 0.5s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-
-
-
-@keyframes sidebarLoad{
-
-
-from{
-
-
-opacity:0;
-
-
-transform:
-
-translateX(-40px);
-
-
-}
-
-
-to{
-
-
-opacity:1;
-
-
-transform:
-
-translateX(0);
-
-
-}
-
-
-
-}
-
-
-
-
-
-
-/* SMOOTH SCROLL */
-
-
-* {
-
-
-scroll-behavior:smooth;
-
-
+@keyframes sidebarLoad {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }

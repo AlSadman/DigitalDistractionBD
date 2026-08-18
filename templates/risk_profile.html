@@ -1,380 +1,133 @@
 {% extends "base.html" %}
 
-
 {% block title %}
 Risk Profile
 {% endblock %}
 
-
-
-
 {% block content %}
 
-
-
 <div class="result-header">
-
-
-<h1>
-Digital Behaviour Risk Profile
-</h1>
-
-
-<p>
-Detailed analysis of behavioural patterns identified from the assessment.
-</p>
-
-
+    <div class="d-inline-flex align-items-center gap-2 px-3 py-1 mb-2 rounded-pill" style="background: #fff7ed; border: 1px solid #ffedd5; font-size: 12px; font-weight: 700; color: #c2410c;">
+        <span>📊</span> Risk Assessment Summary
+    </div>
+    <h1>Digital Behaviour <span class="accent-word">Risk Profile</span></h1>
+    <p>Detailed analysis of behavioural risk factors identified from your machine learning assessment.</p>
 </div>
-
-
-
-
-
-
 
 <div class="dashboard-grid">
 
+    <div class="glass-card risk-card">
+        <div class="risk-icon">📱</div>
+        <h2>Digital Distraction</h2>
+        <h3 class="risk-level level-{{ prediction.Distraction_Level|lower if prediction else 'medium' }}">
+            {{ prediction.Distraction_Level if prediction else "Not Available" }}
+        </h3>
+        <p>Measures the frequency and intensity of digital interruptions during daily learning routines.</p>
+    </div>
 
+    <div class="glass-card risk-card">
+        <div class="risk-icon">📚</div>
+        <h2>Academic Impact</h2>
+        <h3 class="risk-level level-{{ prediction.Academic_Impact_Level|lower if prediction else 'medium' }}">
+            {{ prediction.Academic_Impact_Level if prediction else "Not Available" }}
+        </h3>
+        <p>Represents the influence of digital usage patterns on academic deadlines and exam prep.</p>
+    </div>
 
+    <div class="glass-card risk-card">
+        <div class="risk-icon">🌐</div>
+        <h2>Social Impact</h2>
+        <h3 class="risk-level level-{{ prediction.Social_Impact_Level|lower if prediction else 'medium' }}">
+            {{ prediction.Social_Impact_Level if prediction else "Not Available" }}
+        </h3>
+        <p>Evaluates changes in interpersonal communication habits and sleep quality.</p>
+    </div>
 
-
-<div class="glass-card risk-card">
-
-
-<div class="risk-icon">
-📱
-</div>
-
-
-<h2>
-Digital Distraction
-</h2>
-
-
-<h3 class="risk-level">
-
-{{ prediction.Distraction_Level if prediction else "Not Available" }}
-
-</h3>
-
-
-<p>
-
-Measures the frequency and intensity of digital interruptions during daily activities.
-
-</p>
-
-
-</div>
-
-
-
-
-
-
-
-
-
-<div class="glass-card risk-card">
-
-
-<div class="risk-icon">
-📚
-</div>
-
-
-<h2>
-Academic Impact
-</h2>
-
-
-<h3 class="risk-level">
-
-{{ prediction.Academic_Impact_Level if prediction else "Not Available" }}
-
-</h3>
-
-
-<p>
-
-Represents the influence of digital usage patterns on academic activities.
-
-</p>
-
+    <div class="glass-card risk-card">
+        <div class="risk-icon">🎯</div>
+        <h2>Focus Control</h2>
+        <h3 class="risk-level level-{{ prediction.Focus_Level|lower if prediction else 'medium' }}">
+            {{ prediction.Focus_Level if prediction else "Not Available" }}
+        </h3>
+        <p>Represents self-regulation ability, deep concentration span, and impulse control.</p>
+    </div>
 
 </div>
 
+<div class="glass-card mt-4">
+    <h2>Risk Interpretation Framework</h2>
+    <p>How our intelligence system classifies behavioural impact intensity</p>
 
+    <div class="risk-table">
+        <div class="risk-row">
+            <span>Low</span>
+            <p>Controlled behaviour with healthy digital boundaries and minimal disruption.</p>
+        </div>
 
+        <div class="risk-row">
+            <span>Medium</span>
+            <p>Moderate influence requiring conscious monitoring and structured time allocation.</p>
+        </div>
 
-
-
-
-
-
-<div class="glass-card risk-card">
-
-
-<div class="risk-icon">
-🌐
+        <div class="risk-row">
+            <span>High</span>
+            <p>Significant behavioural friction requiring focused intervention and habit refinement.</p>
+        </div>
+    </div>
 </div>
 
+<div class="glass-card mt-4">
+    <h2>Assessment Dimension Weightings</h2>
+    <p>Target baseline thresholds across key behavioural categories</p>
 
-<h2>
-Social Impact
-</h2>
+    <div class="category-progress">
+        <div class="progress-item">
+            <label>
+                <span>Digital Distraction Tendency</span>
+                <span>75% Target Threshold</span>
+            </label>
+            <div class="progress-bar">
+                <div class="progress-fill" style="width: 75%"></div>
+            </div>
+        </div>
 
+        <div class="progress-item">
+            <label>
+                <span>Academic Focus Efficiency</span>
+                <span>60% Target Threshold</span>
+            </label>
+            <div class="progress-bar">
+                <div class="progress-fill" style="width: 60%"></div>
+            </div>
+        </div>
 
-<h3 class="risk-level">
+        <div class="progress-item">
+            <label>
+                <span>Social Screen Balance</span>
+                <span>45% Target Threshold</span>
+            </label>
+            <div class="progress-bar">
+                <div class="progress-fill" style="width: 45%"></div>
+            </div>
+        </div>
 
-{{ prediction.Social_Impact_Level if prediction else "Not Available" }}
-
-</h3>
-
-
-<p>
-
-Evaluates possible changes in social interaction behaviour.
-
-</p>
-
-
+        <div class="progress-item">
+            <label>
+                <span>Self-Regulation Control</span>
+                <span>70% Target Threshold</span>
+            </label>
+            <div class="progress-bar">
+                <div class="progress-fill" style="width: 70%"></div>
+            </div>
+        </div>
+    </div>
 </div>
 
-
-
-
-
-
-
-
-
-<div class="glass-card risk-card">
-
-
-<div class="risk-icon">
-🎯
+<div class="text-center mt-5 mb-3">
+    <a href="/" class="primary-btn">
+        <span>Start New Assessment</span>
+        <span>➔</span>
+    </a>
 </div>
-
-
-<h2>
-Focus Control
-</h2>
-
-
-<h3 class="risk-level">
-
-{{ prediction.Focus_Level if prediction else "Not Available" }}
-
-</h3>
-
-
-<p>
-
-Represents attention management and self-regulation ability.
-
-</p>
-
-
-</div>
-
-
-
-
-</div>
-
-
-
-
-
-
-
-
-
-<div class="glass-card">
-
-
-<h2>
-Risk Interpretation Framework
-</h2>
-
-
-
-<div class="risk-table">
-
-
-<div class="risk-row">
-
-<span>
-Low
-</span>
-
-<p>
-Controlled behaviour with effective digital management.
-</p>
-
-</div>
-
-
-
-
-<div class="risk-row">
-
-<span>
-Medium
-</span>
-
-<p>
-Moderate influence requiring awareness and monitoring.
-</p>
-
-</div>
-
-
-
-
-<div class="risk-row">
-
-<span>
-High
-</span>
-
-<p>
-Strong behavioural influence requiring improvement strategies.
-</p>
-
-</div>
-
-
-
-</div>
-
-
-
-</div>
-
-
-
-
-
-
-
-
-
-<div class="glass-card">
-
-
-<h2>
-Assessment Categories
-</h2>
-
-
-
-<div class="category-progress">
-
-
-<div class="progress-item">
-
-
-<label>
-Digital Behaviour
-</label>
-
-
-<div class="progress-bar">
-
-<div class="progress-fill"
-style="width:75%">
-</div>
-
-</div>
-
-
-</div>
-
-
-
-
-
-<div class="progress-item">
-
-
-<label>
-Academic Influence
-</label>
-
-
-<div class="progress-bar">
-
-<div class="progress-fill"
-style="width:60%">
-</div>
-
-</div>
-
-
-</div>
-
-
-
-
-
-
-<div class="progress-item">
-
-
-<label>
-Social Balance
-</label>
-
-
-<div class="progress-bar">
-
-<div class="progress-fill"
-style="width:45%">
-</div>
-
-</div>
-
-
-</div>
-
-
-
-
-
-
-
-<div class="progress-item">
-
-
-<label>
-Focus Management
-</label>
-
-
-<div class="progress-bar">
-
-<div class="progress-fill"
-style="width:70%">
-</div>
-
-</div>
-
-
-</div>
-
-
-
-</div>
-
-
-</div>
-
-
-
-
-
 
 {% endblock %}

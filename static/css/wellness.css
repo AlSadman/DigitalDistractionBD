@@ -1,1009 +1,501 @@
 /* =========================================================
-DIGITAL WELLNESS DASHBOARD
+   DIGITAL WELLNESS DASHBOARD - LIGHT THEME
 ========================================================= */
 
-
-.wellness-page{
-
-    padding:50px;
-
-    max-width:1600px;
-
-    margin:auto;
-
+.wellness-page {
+    padding: 10px 0 40px;
+    max-width: 1400px;
+    margin: auto;
 }
-
-
 
 /* =========================================================
-HEADER
+   HEADER
 ========================================================= */
-
-
-.wellness-header{
-
-    text-align:center;
-
-    margin-bottom:50px;
-
+.wellness-header {
+    text-align: center;
+    margin-bottom: 45px;
 }
 
-
-.wellness-header-icon{
-
-    width:65px;
-
-    height:65px;
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    margin:0 auto 18px;
-
-    border-radius:20px;
-
-    font-size:30px;
-
-    background:
-    linear-gradient(
-        135deg,
-        rgba(52,211,153,.22),
-        rgba(56,189,248,.18)
-    );
-
-    border:
-    1px solid rgba(255,255,255,.12);
-
+.wellness-header-icon {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 16px;
+    border-radius: 20px;
+    font-size: 28px;
+    background: #ecfdf5;
+    border: 1px solid #a7f3d0;
+    box-shadow: var(--shadow-sm);
 }
 
-
-.wellness-header h1{
-
-    font-size:46px;
-
-    font-weight:700;
-
-    margin-bottom:12px;
-
-    background:
-    linear-gradient(
-        90deg,
-        #38bdf8,
-        #818cf8,
-        #34d399
-    );
-
-    -webkit-background-clip:text;
-
-    color:transparent;
-
+.wellness-header h1 {
+    font-size: clamp(32px, 4vw, 44px);
+    font-weight: 800;
+    letter-spacing: -1.2px;
+    margin-bottom: 10px;
+    color: var(--text-heading);
 }
 
-
-.wellness-header p{
-
-    color:#94a3b8;
-
-    font-size:17px;
-
-    max-width:760px;
-
-    margin:auto;
-
-    line-height:1.7;
-
+.wellness-header p {
+    color: var(--text-soft);
+    font-size: 16.5px;
+    max-width: 720px;
+    margin: auto;
+    line-height: 1.7;
 }
-
-
 
 /* =========================================================
-SECTION HEADINGS
+   SECTION HEADINGS
 ========================================================= */
-
-
-.wellness-section{
-
-    margin-top:55px;
-
+.wellness-section {
+    margin-top: 45px;
 }
 
-
-.wellness-section-heading{
-
-    display:flex;
-
-    justify-content:space-between;
-
-    align-items:flex-end;
-
-    gap:30px;
-
-    margin-bottom:25px;
-
+.wellness-section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 30px;
+    margin-bottom: 22px;
 }
 
-
-.wellness-section-heading h2{
-
-    font-size:28px;
-
-    margin:5px 0 0;
-
-    font-weight:700;
-
+.wellness-section-heading h2 {
+    font-size: 24px;
+    margin: 4px 0 0;
+    font-weight: 800;
+    color: var(--text-heading);
+    letter-spacing: -0.5px;
 }
 
-
-.wellness-section-heading p{
-
-    color:#94a3b8;
-
-    max-width:520px;
-
-    margin:0;
-
-    line-height:1.6;
-
+.wellness-section-heading p {
+    color: var(--text-soft);
+    max-width: 520px;
+    margin: 0;
+    font-size: 14.5px;
+    line-height: 1.6;
 }
 
-
-.section-kicker{
-
-    display:block;
-
-    color:#38bdf8;
-
-    font-size:12px;
-
-    font-weight:700;
-
-    letter-spacing:1.8px;
-
+.section-kicker {
+    display: inline-block;
+    color: var(--primary);
+    font-size: 11.5px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
 }
-
-
 
 /* =========================================================
-CURRENT WELLNESS PROFILE
+   CURRENT WELLNESS PROFILE CARDS
 ========================================================= */
-
-
-.wellness-grid{
-
-    display:grid;
-
-    grid-template-columns:
-    repeat(4,1fr);
-
-    gap:22px;
-
+.wellness-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
 }
 
-
-.wellness-card{
-
-    position:relative;
-
-    overflow:hidden;
-
-    min-height:200px;
-
-    padding:30px;
-
-    text-align:center;
-
-    border-radius:25px;
-
-    background:
-    linear-gradient(
-        145deg,
-        rgba(255,255,255,.09),
-        rgba(255,255,255,.045)
-    );
-
-    border:
-    1px solid rgba(255,255,255,.13);
-
-    backdrop-filter:blur(18px);
-
-    transition:
-    transform .3s ease,
-    border-color .3s ease;
-
+.wellness-card {
+    position: relative;
+    overflow: hidden;
+    min-height: 190px;
+    padding: 26px 20px;
+    text-align: center;
+    border-radius: 22px;
+    background: rgba(255, 255, 255, 0.78);
+    border: 1px solid rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px);
+    box-shadow: var(--shadow-sm);
+    transition: all 0.3s ease;
 }
 
-
-.wellness-card::before{
-
-    content:"";
-
-    position:absolute;
-
-    width:130px;
-
-    height:130px;
-
-    border-radius:50%;
-
-    top:-65px;
-
-    right:-45px;
-
-    background:
-    rgba(56,189,248,.08);
-
+.wellness-card:hover {
+    transform: translateY(-4px);
+    background: #ffffff;
+    box-shadow: var(--shadow-md);
 }
 
-
-.wellness-card:hover{
-
-    transform:translateY(-6px);
-
-    border-color:
-    rgba(56,189,248,.35);
-
+.wellness-card-icon {
+    font-size: 28px;
+    margin-bottom: 12px;
 }
 
-
-.wellness-card-icon{
-
-    font-size:30px;
-
-    margin-bottom:15px;
-
+.wellness-card h3 {
+    font-size: 14.5px;
+    font-weight: 700;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 6px;
 }
 
-
-.wellness-card h3{
-
-    font-size:19px;
-
-    font-weight:650;
-
-    margin-bottom:10px;
-
+.wellness-card h2 {
+    font-size: 32px;
+    margin: 8px 0 6px;
+    font-weight: 800;
+    letter-spacing: -0.5px;
 }
 
-
-.wellness-card h2{
-
-    font-size:36px;
-
-    margin:10px 0;
-
-    font-weight:750;
-
+.wellness-card p {
+    color: var(--text-soft);
+    margin: 0;
+    font-size: 13px;
+    font-weight: 500;
 }
 
-
-.wellness-card p{
-
-    color:#94a3b8;
-
-    margin:0;
-
-    font-size:14px;
-
+.wellness-card.distraction h2 {
+    color: #e11d48;
 }
 
-
-.distraction h2{
-
-    color:#fb7185;
-
+.wellness-card.academic h2 {
+    color: #d97706;
 }
 
-
-.academic h2{
-
-    color:#fbbf24;
-
+.wellness-card.social h2 {
+    color: #2563eb;
 }
 
-
-.social h2{
-
-    color:#60a5fa;
-
+.wellness-card.focus h2 {
+    color: #059669;
 }
-
-
-.focus h2{
-
-    color:#34d399;
-
-}
-
-
 
 /* =========================================================
-PRIORITY ACTION PLAN
+   PRIORITY ACTION PLAN
 ========================================================= */
-
-
-.priority-grid{
-
-    display:grid;
-
-    grid-template-columns:
-    repeat(2,1fr);
-
-    gap:20px;
-
+.priority-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
 }
 
-
-.priority-card{
-
-    display:flex;
-
-    align-items:flex-start;
-
-    gap:20px;
-
-    padding:26px;
-
-    border-radius:22px;
-
-    background:
-    rgba(255,255,255,.055);
-
-    border:
-    1px solid rgba(255,255,255,.10);
-
-    transition:.3s ease;
-
+.priority-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+    padding: 24px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.75);
+    border: 1px solid rgba(255, 255, 255, 0.95);
+    box-shadow: var(--shadow-sm);
+    transition: all 0.3s ease;
 }
 
-
-.priority-card:hover{
-
-    background:
-    rgba(255,255,255,.085);
-
-    transform:
-    translateY(-4px);
-
+.priority-card:hover {
+    background: #ffffff;
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-md);
 }
 
-
-.priority-icon{
-
-    min-width:52px;
-
-    width:52px;
-
-    height:52px;
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    border-radius:17px;
-
-    font-size:24px;
-
-    background:
-    rgba(56,189,248,.12);
-
-    border:
-    1px solid rgba(56,189,248,.18);
-
+.priority-icon {
+    min-width: 48px;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 14px;
+    font-size: 22px;
+    background: #fff7ed;
+    border: 1px solid #ffedd5;
+    flex-shrink: 0;
 }
 
-
-.priority-card h3{
-
-    font-size:19px;
-
-    margin-bottom:8px;
-
+.priority-card h3 {
+    font-size: 17px;
+    font-weight: 800;
+    color: var(--text-heading);
+    margin-bottom: 6px;
 }
 
-
-.priority-card p{
-
-    color:#cbd5e1;
-
-    line-height:1.7;
-
-    margin:0;
-
+.priority-card p {
+    color: var(--text-soft);
+    line-height: 1.65;
+    margin: 0;
+    font-size: 14px;
 }
-
-
 
 /* =========================================================
-ASSESSMENT RECOMMENDATIONS
+   ASSESSMENT RECOMMENDATIONS
 ========================================================= */
-
-
-.assessment-recommendations{
-
-    margin-top:55px;
-
-    padding:32px;
-
-    border-radius:25px;
-
-    background:
-    linear-gradient(
-        135deg,
-        rgba(37,99,235,.11),
-        rgba(124,58,237,.08)
-    );
-
-    border:
-    1px solid rgba(96,165,250,.18);
-
+.assessment-recommendations {
+    margin-top: 45px;
+    padding: 32px;
+    border-radius: 24px;
+    background: linear-gradient(135deg, rgba(255, 245, 235, 0.8) 0%, rgba(255, 255, 255, 0.9) 100%);
+    border: 1px solid rgba(254, 215, 185, 0.8);
+    box-shadow: var(--shadow-sm);
 }
 
-
-.recommendation-heading{
-
-    display:flex;
-
-    align-items:center;
-
-    gap:18px;
-
-    margin-bottom:25px;
-
+.recommendation-heading {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 20px;
 }
 
-
-.recommendation-heading-icon{
-
-    width:55px;
-
-    height:55px;
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-    border-radius:17px;
-
-    font-size:25px;
-
-    background:
-    rgba(129,140,248,.15);
-
+.recommendation-heading-icon {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 14px;
+    font-size: 22px;
+    background: #fff7ed;
+    border: 1px solid #ffedd5;
 }
 
-
-.recommendation-heading h2{
-
-    margin:4px 0 0;
-
-    font-size:26px;
-
+.recommendation-heading h2 {
+    margin: 0;
+    font-size: 22px;
+    font-weight: 800;
+    color: var(--text-heading);
 }
 
-
-.recommendation-list-wellness{
-
-    display:grid;
-
-    gap:12px;
-
+.recommendation-list-wellness {
+    display: grid;
+    gap: 10px;
 }
 
-
-.wellness-recommendation-item{
-
-    display:flex;
-
-    align-items:center;
-
-    gap:15px;
-
-    padding:17px 20px;
-
-    border-radius:16px;
-
-    background:
-    rgba(255,255,255,.055);
-
-    border:
-    1px solid rgba(255,255,255,.08);
-
+.wellness-recommendation-item {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 14px 18px;
+    border-radius: 14px;
+    background: #ffffff;
+    border: 1px solid rgba(226, 232, 240, 0.8);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
 }
 
-
-.recommendation-check{
-
-    width:28px;
-
-    height:28px;
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-    border-radius:50%;
-
-    background:
-    rgba(52,211,153,.15);
-
-    color:#34d399;
-
-    font-weight:800;
-
+.recommendation-check {
+    width: 26px;
+    height: 26px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background: #ecfdf5;
+    color: #059669;
+    font-weight: 800;
+    font-size: 13px;
+    flex-shrink: 0;
 }
 
-
-.wellness-recommendation-item p{
-
-    margin:0;
-
-    color:#dbeafe;
-
+.wellness-recommendation-item p {
+    margin: 0;
+    color: var(--text-heading);
+    font-size: 14px;
+    font-weight: 500;
 }
-
-
 
 /* =========================================================
-DIGITAL WELLNESS TOOLKIT
+   DIGITAL WELLNESS TOOLKIT
 ========================================================= */
-
-
-.toolkit-grid{
-
-    display:grid;
-
-    grid-template-columns:
-    repeat(3,1fr);
-
-    gap:20px;
-
+.toolkit-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
 }
 
-
-.toolkit-card{
-
-    padding:28px;
-
-    min-height:265px;
-
-    border-radius:24px;
-
-    background:
-    rgba(255,255,255,.055);
-
-    border:
-    1px solid rgba(255,255,255,.10);
-
-    transition:.3s ease;
-
+.toolkit-card {
+    padding: 26px;
+    min-height: 250px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.75);
+    border: 1px solid rgba(255, 255, 255, 0.95);
+    box-shadow: var(--shadow-sm);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
-
-.toolkit-card:hover{
-
-    transform:
-    translateY(-5px);
-
-    background:
-    rgba(255,255,255,.08);
-
+.toolkit-card:hover {
+    transform: translateY(-4px);
+    background: #ffffff;
+    box-shadow: var(--shadow-md);
 }
 
-
-.toolkit-icon{
-
-    width:52px;
-
-    height:52px;
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    margin-bottom:20px;
-
-    border-radius:16px;
-
-    font-size:24px;
-
-    background:
-    rgba(56,189,248,.12);
-
+.toolkit-icon {
+    width: 46px;
+    height: 46px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+    border-radius: 14px;
+    font-size: 22px;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
 }
 
-
-.toolkit-card h3{
-
-    font-size:19px;
-
-    margin-bottom:12px;
-
+.toolkit-card h3 {
+    font-size: 17px;
+    font-weight: 800;
+    color: var(--text-heading);
+    margin-bottom: 8px;
 }
 
-
-.toolkit-card p{
-
-    color:#aebed1;
-
-    line-height:1.7;
-
-    min-height:85px;
-
+.toolkit-card p {
+    color: var(--text-soft);
+    line-height: 1.6;
+    margin-bottom: 12px;
+    font-size: 13.5px;
 }
 
-
-.toolkit-tip{
-
-    display:block;
-
-    margin-top:18px;
-
-    padding-top:15px;
-
-    border-top:
-    1px solid rgba(255,255,255,.08);
-
-    color:#7dd3fc;
-
-    font-size:13px;
-
-    line-height:1.5;
-
+.toolkit-tip {
+    display: block;
+    padding-top: 12px;
+    border-top: 1px solid #f1f5f9;
+    color: var(--primary);
+    font-size: 12.5px;
+    font-weight: 600;
+    line-height: 1.4;
 }
-
-
-.sleep{
-
-    background:
-    rgba(129,140,248,.15);
-
-}
-
-
-.break-tool{
-
-    background:
-    rgba(251,191,36,.12);
-
-}
-
-
-.posture{
-
-    background:
-    rgba(52,211,153,.12);
-
-}
-
-
-.social-tool{
-
-    background:
-    rgba(244,114,182,.12);
-
-}
-
-
 
 /* =========================================================
-DAILY CHECKLIST
+   DAILY CHECKLIST
 ========================================================= */
-
-
-.daily-checklist{
-
-    margin-top:55px;
-
-    display:grid;
-
-    grid-template-columns:
-    .8fr 1.5fr;
-
-    gap:35px;
-
-    padding:35px;
-
-    border-radius:28px;
-
-    background:
-    linear-gradient(
-        135deg,
-        rgba(15,118,110,.13),
-        rgba(37,99,235,.08)
-    );
-
-    border:
-    1px solid rgba(52,211,153,.15);
-
+.daily-checklist {
+    margin-top: 45px;
+    display: grid;
+    grid-template-columns: 0.9fr 1.4fr;
+    gap: 30px;
+    padding: 32px;
+    border-radius: 24px;
+    background: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.95);
+    box-shadow: var(--shadow-sm);
 }
 
-
-.checklist-intro h2{
-
-    margin:6px 0 12px;
-
-    font-size:27px;
-
+.checklist-intro h2 {
+    margin: 4px 0 10px;
+    font-size: 24px;
+    font-weight: 800;
+    color: var(--text-heading);
 }
 
-
-.checklist-intro p{
-
-    color:#94a3b8;
-
-    line-height:1.6;
-
+.checklist-intro p {
+    color: var(--text-soft);
+    line-height: 1.6;
+    font-size: 14.5px;
 }
 
-
-.checklist-items{
-
-    display:flex;
-
-    flex-direction:column;
-
-    gap:12px;
-
+.checklist-items {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
-
-.checklist-item{
-
-    display:flex;
-
-    align-items:center;
-
-    gap:14px;
-
-    padding:14px 17px;
-
-    border-radius:15px;
-
-    background:
-    rgba(255,255,255,.05);
-
+.checklist-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 16px;
+    border-radius: 14px;
+    background: #ffffff;
+    border: 1px solid rgba(226, 232, 240, 0.8);
 }
 
-
-.checklist-item span{
-
-    width:28px;
-
-    height:28px;
-
-    flex-shrink:0;
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    border-radius:50%;
-
-    color:#34d399;
-
-    background:
-    rgba(52,211,153,.13);
-
-    font-weight:800;
-
+.checklist-item span {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: #059669;
+    background: #ecfdf5;
+    font-weight: 800;
+    font-size: 12px;
 }
 
-
-.checklist-item p{
-
-    margin:0;
-
-    color:#d1d9e6;
-
+.checklist-item p {
+    margin: 0;
+    color: var(--text-heading);
+    font-size: 13.5px;
+    font-weight: 500;
 }
-
-
 
 /* =========================================================
-INFORMATION NOTE
+   WELLNESS NOTE & EMPTY STATE
 ========================================================= */
-
-
-.wellness-note{
-
-    display:flex;
-
-    align-items:flex-start;
-
-    gap:14px;
-
-    margin-top:30px;
-
-    padding:18px 22px;
-
-    border-radius:17px;
-
-    background:
-    rgba(148,163,184,.07);
-
-    border:
-    1px solid rgba(148,163,184,.12);
-
+.wellness-note {
+    margin-top: 30px;
+    padding: 16px 20px;
+    border-radius: 16px;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    display: flex;
+    align-items: center;
+    gap: 12px;
 }
 
-
-.wellness-note span{
-
-    font-size:20px;
-
+.wellness-note p {
+    margin: 0;
+    color: var(--text-muted);
+    font-size: 13px;
+    line-height: 1.5;
 }
 
-
-.wellness-note p{
-
-    margin:0;
-
-    color:#94a3b8;
-
-    font-size:13px;
-
-    line-height:1.6;
-
+.wellness-empty-state {
+    text-align: center;
+    padding: 70px 20px;
 }
 
+.empty-wellness-icon {
+    font-size: 54px;
+    margin-bottom: 16px;
+}
 
+.wellness-empty-state h2 {
+    font-size: 26px;
+    font-weight: 800;
+    color: var(--text-heading);
+    margin-bottom: 8px;
+}
+
+.wellness-empty-state p {
+    color: var(--text-muted);
+    margin-bottom: 24px;
+    font-size: 15px;
+}
 
 /* =========================================================
-EMPTY STATE
+   RESPONSIVE
 ========================================================= */
+@media (max-width: 1100px) {
+    .wellness-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 
+    .toolkit-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 
-.wellness-empty-state{
-
-    max-width:650px;
-
-    margin:80px auto;
-
-    padding:55px;
-
-    text-align:center;
-
-    border-radius:30px;
-
-    background:
-    rgba(255,255,255,.055);
-
-    border:
-    1px solid rgba(255,255,255,.10);
-
+    .daily-checklist {
+        grid-template-columns: 1fr;
+    }
 }
 
-
-.empty-wellness-icon{
-
-    font-size:55px;
-
-    margin-bottom:20px;
-
-}
-
-
-.wellness-empty-state h2{
-
-    margin-bottom:12px;
-
-}
-
-
-.wellness-empty-state p{
-
-    color:#94a3b8;
-
-    margin-bottom:30px;
-
-}
-
-
-
-/* =========================================================
-RESPONSIVE DESIGN
-========================================================= */
-
-
-@media(max-width:1200px){
-
-
-    .wellness-grid{
-
-        grid-template-columns:
-        repeat(2,1fr);
-
+@media (max-width: 650px) {
+    .wellness-grid {
+        grid-template-columns: 1fr;
     }
 
-
-    .toolkit-grid{
-
-        grid-template-columns:
-        repeat(2,1fr);
-
+    .priority-grid {
+        grid-template-columns: 1fr;
     }
 
-}
-
-
-
-@media(max-width:900px){
-
-
-    .wellness-page{
-
-        padding:25px;
-
+    .toolkit-grid {
+        grid-template-columns: 1fr;
     }
 
-
-    .wellness-section-heading{
-
-        flex-direction:column;
-
-        align-items:flex-start;
-
+    .wellness-section-heading {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
     }
-
-
-    .priority-grid{
-
-        grid-template-columns:1fr;
-
-    }
-
-
-    .daily-checklist{
-
-        grid-template-columns:1fr;
-
-    }
-
-}
-
-
-
-@media(max-width:650px){
-
-
-    .wellness-grid{
-
-        grid-template-columns:1fr;
-
-    }
-
-
-    .toolkit-grid{
-
-        grid-template-columns:1fr;
-
-    }
-
-
-    .wellness-header h1{
-
-        font-size:34px;
-
-    }
-
-
-    .priority-card{
-
-        flex-direction:column;
-
-    }
-
 }

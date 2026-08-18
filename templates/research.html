@@ -1,368 +1,624 @@
 {% extends "base.html" %}
 
 {% block title %}
-Research Analytics
+Research Profile & Analytics
 {% endblock %}
 
-
 {% block content %}
+<div class="research-v4">
 
+    <!-- =========================================================
+         1. RESEARCH HERO SECTION
+    ========================================================= -->
+    <header class="rv4-hero-card">
+        <div class="rv4-hero-badge">
+            <span class="rv4-badge-sparkle">✦</span>
+            <span>RESEARCH PROFILE &amp; ANALYTICS</span>
+        </div>
 
-<div class="research-container">
-
-
-    <!-- PAGE HEADER -->
-    <div class="research-header">
-
-        <h1>
-            Research Analytics Dashboard
+        <h1 class="rv4-hero-title">
+            Digital Distraction Analysis Among Bangladeshi University Students and Development of a Machine Learning-Based Web Application for Behavioral Impact Prediction
         </h1>
 
-        <p>
-            Machine Learning Based Digital Behaviour Analysis System
+        <p class="rv4-hero-subtitle">
+            <span>Behavioural Analysis</span>
+            <span class="rv4-dot">•</span>
+            <span>Machine Learning Prediction</span>
+            <span class="rv4-dot">•</span>
+            <span>Web-Based Digital Wellness Assessment</span>
         </p>
 
-    </div>
-
-
-
-
-    <!-- RESEARCH OVERVIEW -->
-
-    <div class="research-card">
-
-
-        <div class="card-icon">
-            🔬
+        <!-- 4 Hero Stat Cards -->
+        <div class="rv4-hero-stats-grid">
+            <div class="rv4-stat-card">
+                <div class="rv4-stat-val">1,015</div>
+                <div class="rv4-stat-lbl">Valid Responses</div>
+            </div>
+            <div class="rv4-stat-card">
+                <div class="rv4-stat-val">23</div>
+                <div class="rv4-stat-lbl">Questionnaire Variables</div>
+            </div>
+            <div class="rv4-stat-card">
+                <div class="rv4-stat-val">5</div>
+                <div class="rv4-stat-lbl">ML Models Evaluated</div>
+            </div>
+            <div class="rv4-stat-card">
+                <div class="rv4-stat-val">4</div>
+                <div class="rv4-stat-lbl">Behavioural Prediction Targets</div>
+            </div>
         </div>
+    </header>
 
 
-        <h2>
-            Research Overview
-        </h2>
-
-
-        <p>
-
-            This research investigates smartphone usage patterns and
-            digital behaviour among Bangladeshi university students.
-            A machine learning based framework was developed to analyse
-            behavioural impact levels related to digital distraction,
-            academic impact, social impact and focus behaviour.
-
-        </p>
-
-
-    </div>
-
-
-
-
-
-    <!-- RESEARCH MOTIVATION -->
-
-    <div class="research-card">
-
-
-        <div class="card-icon">
-            🎯
-        </div>
-
-
-        <h2>
-            Research Motivation
-        </h2>
-
-
-        <p>
-
-            Increasing smartphone dependency has influenced students'
-            learning habits, concentration ability and daily interactions.
-            This research aims to understand these behavioural patterns
-            and provide an intelligent assessment platform that supports
-            awareness and healthier digital habits.
-
-        </p>
-
-
-    </div>
-
-
-
-
-
-
-    <!-- OBJECTIVES -->
-
-
-    <h2 class="section-title">
-        Research Objectives
-    </h2>
-
-
-
-    <div class="objective-grid">
-
-
-
-        <div class="objective-card">
-
-
-            <div class="objective-icon">
-                📱
+    <!-- =========================================================
+         2. ABOUT OUR RESEARCH + RESEARCH TEAM
+    ========================================================= -->
+    <section class="rv4-section-wrap">
+        <div class="rv4-two-col-grid">
+            <!-- Left: About Card -->
+            <div class="rv4-card rv4-about-card">
+                <div class="rv4-card-header">
+                    <div class="rv4-icon-box orange">🔬</div>
+                    <div>
+                        <span class="rv4-card-eyebrow">OVERVIEW</span>
+                        <h2 class="rv4-card-title">About Our Research</h2>
+                    </div>
+                </div>
+                <div class="rv4-card-body">
+                    <p class="rv4-about-text">
+                        This study analyses smartphone usage and digital behaviour among Bangladeshi university students and develops a machine learning-based framework for predicting digital distraction, academic impact, social impact and focus levels. The selected model was integrated into a web application to provide accessible behavioural assessment and personalized digital wellness recommendations.
+                    </p>
+                </div>
             </div>
 
+            <!-- Right: Team Card -->
+            <div class="rv4-card rv4-team-card">
+                <div class="rv4-card-header">
+                    <div class="rv4-icon-box blue">👥</div>
+                    <div>
+                        <span class="rv4-card-eyebrow">ACADEMIC PROFILE</span>
+                        <h2 class="rv4-card-title">Research Team</h2>
+                    </div>
+                </div>
 
-            <h3>
-                Objective 1
-            </h3>
+                <div class="rv4-team-content">
+                    <!-- Student Researchers -->
+                    <div class="rv4-students-grid">
+                        <div class="rv4-member-card student">
+                            <div class="rv4-member-avatar">👨‍💻</div>
+                            <div class="rv4-member-info">
+                                <div class="rv4-member-role">Researcher</div>
+                                <div class="rv4-member-name">Al Sadman Bin Hossain</div>
+                                <div class="rv4-member-id">ID: 22070102</div>
+                            </div>
+                        </div>
+
+                        <div class="rv4-member-card student">
+                            <div class="rv4-member-avatar">👨‍💻</div>
+                            <div class="rv4-member-info">
+                                <div class="rv4-member-role">Researcher</div>
+                                <div class="rv4-member-name">Istiaq Ishraq Ezaz</div>
+                                <div class="rv4-member-id">ID: 22070138</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Supervisor -->
+                    <div class="rv4-member-card supervisor">
+                        <div class="rv4-supervisor-badge">SUPERVISOR</div>
+                        <div class="rv4-supervisor-main">
+                            <div class="rv4-member-avatar supervisor-avatar">🎓</div>
+                            <div class="rv4-member-info">
+                                <div class="rv4-member-name supervisor-name">Mohammad Arif Hasan Chowdhury</div>
+                                <div class="rv4-member-designation">Assistant Professor, Department of CSE, FSET, USTC</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Institution Footer -->
+                    <div class="rv4-institution-meta">
+                        <div class="rv4-inst-line primary">Department of Computer Science and Engineering</div>
+                        <div class="rv4-inst-line secondary">University of Science and Technology Chittagong (USTC)</div>
+                        <div class="rv4-inst-date">August 2026</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
 
-            <h4>
-                Digital Behaviour Analysis
-            </h4>
-
-
-            <p>
-
-                To analyze smartphone usage patterns and digital
-                behaviour among Bangladeshi university students.
-
-            </p>
-
-
+    <!-- =========================================================
+         3. RESEARCH OBJECTIVES
+    ========================================================= -->
+    <section class="rv4-section-wrap">
+        <div class="rv4-section-header">
+            <span class="rv4-section-eyebrow">FRAMEWORK</span>
+            <h2 class="rv4-section-title">Research Objectives</h2>
         </div>
 
-
-
-
-
-
-
-        <div class="objective-card">
-
-
-            <div class="objective-icon">
-                🤖
+        <div class="rv4-three-col-grid">
+            <!-- Objective 01 -->
+            <div class="rv4-card rv4-obj-card">
+                <div class="rv4-obj-top">
+                    <div class="rv4-icon-box orange">📱</div>
+                    <span class="rv4-obj-num">01</span>
+                </div>
+                <h3 class="rv4-obj-title">Behaviour Analysis</h3>
+                <p class="rv4-obj-text">
+                    Analyse smartphone usage patterns and digital behaviour among Bangladeshi university students.
+                </p>
             </div>
 
-
-            <h3>
-                Objective 2
-            </h3>
-
-
-            <h4>
-                Machine Learning Prediction
-            </h4>
-
-
-            <p>
-
-                To apply and compare machine learning classification
-                models for predicting behavioural impact levels.
-
-            </p>
-
-
-        </div>
-
-
-
-
-
-
-
-        <div class="objective-card">
-
-
-            <div class="objective-icon">
-                🌐
+            <!-- Objective 02 -->
+            <div class="rv4-card rv4-obj-card">
+                <div class="rv4-obj-top">
+                    <div class="rv4-icon-box purple">🤖</div>
+                    <span class="rv4-obj-num">02</span>
+                </div>
+                <h3 class="rv4-obj-title">Machine Learning Prediction</h3>
+                <p class="rv4-obj-text">
+                    Develop and compare machine learning classification models for behavioural impact prediction.
+                </p>
             </div>
 
+            <!-- Objective 03 -->
+            <div class="rv4-card rv4-obj-card">
+                <div class="rv4-obj-top">
+                    <div class="rv4-icon-box green">🌐</div>
+                    <span class="rv4-obj-num">03</span>
+                </div>
+                <h3 class="rv4-obj-title">Practical Assessment System</h3>
+                <p class="rv4-obj-text">
+                    Develop a web application for behavioural prediction and personalized digital wellness recommendations.
+                </p>
+            </div>
+        </div>
+    </section>
 
-            <h3>
-                Objective 3
-            </h3>
+
+    <!-- =========================================================
+         4. RESEARCH METHODOLOGY
+    ========================================================= -->
+    <section class="rv4-section-wrap">
+        <div class="rv4-section-header">
+            <span class="rv4-section-eyebrow">SYSTEM ARCHITECTURE</span>
+            <h2 class="rv4-section-title">Research Methodology</h2>
+        </div>
+
+        <div class="rv4-card rv4-figure-card">
+            <div class="rv4-figure-img-box">
+                <img src="{{ url_for('static', filename='images/research/methodology_workflow.png') }}"
+                     alt="Overall Research Methodology Workflow"
+                     class="rv4-methodology-img">
+            </div>
+            <div class="rv4-figure-caption">
+                <span class="rv4-caption-tag">Figure 1</span>
+                <span>Overall Research Methodology Workflow</span>
+            </div>
+
+            <!-- 6 Process Chips -->
+            <div class="rv4-process-flow">
+                <div class="rv4-process-chip">
+                    <span class="rv4-chip-step">1</span>
+                    <span>Survey &amp; Data Collection</span>
+                </div>
+                <div class="rv4-flow-arrow">→</div>
+
+                <div class="rv4-process-chip">
+                    <span class="rv4-chip-step">2</span>
+                    <span>Data Preparation</span>
+                </div>
+                <div class="rv4-flow-arrow">→</div>
+
+                <div class="rv4-process-chip">
+                    <span class="rv4-chip-step">3</span>
+                    <span>Behavioural Scoring</span>
+                </div>
+                <div class="rv4-flow-arrow">→</div>
+
+                <div class="rv4-process-chip">
+                    <span class="rv4-chip-step">4</span>
+                    <span>ML Modelling</span>
+                </div>
+                <div class="rv4-flow-arrow">→</div>
+
+                <div class="rv4-process-chip">
+                    <span class="rv4-chip-step">5</span>
+                    <span>Model Evaluation</span>
+                </div>
+                <div class="rv4-flow-arrow">→</div>
+
+                <div class="rv4-process-chip highlight">
+                    <span class="rv4-chip-step">6</span>
+                    <span>Web Application</span>
+                </div>
+            </div>
+        </div>
+    </section>
 
 
-            <h4>
-                Web-Based Assessment System
-            </h4>
+    <!-- =========================================================
+         5. DATA COLLECTION AND DATASET
+    ========================================================= -->
+    <section class="rv4-section-wrap">
+        <div class="rv4-section-header">
+            <span class="rv4-section-eyebrow">FIELDWORK &amp; METRICS</span>
+            <h2 class="rv4-section-title">Data Collection &amp; Dataset</h2>
+        </div>
+
+        <div class="rv4-two-col-grid">
+            <!-- Left: 2-Image Gallery -->
+            <div class="rv4-card rv4-gallery-card">
+                <div class="rv4-gallery-grid">
+                    <div class="rv4-gallery-item">
+                        <img src="{{ url_for('static', filename='images/research/data_collection_1.jpg') }}"
+                             alt="Classroom Visits and Data Collection 1"
+                             loading="lazy">
+                    </div>
+                    <div class="rv4-gallery-item">
+                        <img src="{{ url_for('static', filename='images/research/data_collection_2.jpg') }}"
+                             alt="Classroom Discussions and Data Collection 2"
+                             loading="lazy">
+                    </div>
+                </div>
+                <div class="rv4-figure-caption">
+                    <span class="rv4-caption-tag">Field Work</span>
+                    <span>Classroom Visits, Discussions, and Data Collection Moments</span>
+                </div>
+            </div>
+
+            <!-- Right: Info Card + Dataset Quality Metrics -->
+            <div class="rv4-dataset-right-col">
+                <div class="rv4-card rv4-data-info-card">
+                    <div class="rv4-data-row">
+                        <div class="rv4-data-label">Collection Period</div>
+                        <div class="rv4-data-value">November 2025 – July 2026</div>
+                    </div>
+                    <div class="rv4-data-row">
+                        <div class="rv4-data-label">Collection Method</div>
+                        <div class="rv4-data-value">Structured Google Forms questionnaire</div>
+                    </div>
+                    <div class="rv4-data-row">
+                        <div class="rv4-data-label">Target Participants</div>
+                        <div class="rv4-data-value">Bangladeshi university students</div>
+                    </div>
+                    <div class="rv4-data-row">
+                        <div class="rv4-data-label">Coverage</div>
+                        <div class="rv4-data-value">Public and private universities</div>
+                    </div>
+                    <div class="rv4-data-row">
+                        <div class="rv4-data-label">Distribution</div>
+                        <div class="rv4-data-value">University networks, personal contacts and online channels</div>
+                    </div>
+                </div>
+
+                <!-- 5 Dataset Quality Metric Boxes -->
+                <div class="rv4-quality-metrics-grid">
+                    <div class="rv4-qmetric-box">
+                        <div class="rv4-qmetric-val">1,015</div>
+                        <div class="rv4-qmetric-lbl">Valid Responses</div>
+                    </div>
+                    <div class="rv4-qmetric-box">
+                        <div class="rv4-qmetric-val">23</div>
+                        <div class="rv4-qmetric-lbl">Questionnaire Variables</div>
+                    </div>
+                    <div class="rv4-qmetric-box">
+                        <div class="rv4-qmetric-val clean">0</div>
+                        <div class="rv4-qmetric-lbl">Missing Values</div>
+                    </div>
+                    <div class="rv4-qmetric-box">
+                        <div class="rv4-qmetric-val clean">0</div>
+                        <div class="rv4-qmetric-lbl">Duplicate Records</div>
+                    </div>
+                    <div class="rv4-qmetric-box highlight">
+                        <div class="rv4-qmetric-val">1,015 × 23</div>
+                        <div class="rv4-qmetric-lbl">Final Dataset Size</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
 
-            <p>
+    <!-- =========================================================
+         6. KEY DATASET FINDINGS
+    ========================================================= -->
+    <section class="rv4-section-wrap">
+        <div class="rv4-section-header">
+            <span class="rv4-section-eyebrow">SURVEY INSIGHTS</span>
+            <h2 class="rv4-section-title">Key Dataset Findings</h2>
+        </div>
 
-                To develop a web application that displays Digital
-                Distraction Level, Academic Impact Level, Social Impact
-                Level and Focus Level with personalized recommendations.
+        <!-- 4 Premium Metric Cards -->
+        <div class="rv4-findings-metrics-grid">
+            <div class="rv4-finding-card">
+                <div class="rv4-finding-stat">42.3%</div>
+                <div class="rv4-finding-desc">Use digital devices 4–6 hours/day</div>
+            </div>
+            <div class="rv4-finding-card">
+                <div class="rv4-finding-stat">32.9%</div>
+                <div class="rv4-finding-desc">Use digital devices more than 6 hours/day</div>
+            </div>
+            <div class="rv4-finding-card highlight-orange">
+                <div class="rv4-finding-stat">75.2%</div>
+                <div class="rv4-finding-desc">Have more than 4 hours of daily digital exposure</div>
+            </div>
+            <div class="rv4-finding-card highlight-coral">
+                <div class="rv4-finding-stat">73.3%</div>
+                <div class="rv4-finding-desc">Classified with high digital distraction levels</div>
+            </div>
+        </div>
 
+        <!-- Two-column Chart Layout -->
+        <div class="rv4-two-col-grid rv4-charts-row">
+            <!-- Left Chart -->
+            <div class="rv4-card rv4-chart-card">
+                <div class="rv4-chart-container">
+                    <img src="{{ url_for('static', filename='images/research/daily_device_usage.png') }}"
+                         alt="Daily Device Usage Distribution"
+                         loading="lazy">
+                </div>
+                <div class="rv4-figure-caption">
+                    <span class="rv4-caption-tag">Figure 2</span>
+                    <span>Daily Device Usage Distribution</span>
+                </div>
+            </div>
+
+            <!-- Right Chart -->
+            <div class="rv4-card rv4-chart-card">
+                <div class="rv4-chart-container">
+                    <img src="{{ url_for('static', filename='images/research/digital_distraction_levels.png') }}"
+                         alt="Digital Distraction Level Distribution"
+                         loading="lazy">
+                </div>
+                <div class="rv4-figure-caption">
+                    <span class="rv4-caption-tag">Figure 3</span>
+                    <span>Digital Distraction Level Distribution</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- =========================================================
+         7. BEHAVIOURAL DIMENSION ANALYSIS
+    ========================================================= -->
+    <section class="rv4-section-wrap">
+        <div class="rv4-section-header">
+            <span class="rv4-section-eyebrow">SCALE METRICS</span>
+            <h2 class="rv4-section-title">Behavioural Dimension Analysis</h2>
+        </div>
+
+        <div class="rv4-card rv4-dimensions-card">
+            <div class="rv4-dim-grid">
+                <!-- Dim 1 -->
+                <div class="rv4-dim-item">
+                    <div class="rv4-dim-header">
+                        <div class="rv4-dim-info">
+                            <span class="rv4-dim-icon">📱</span>
+                            <span class="rv4-dim-name">Digital Distraction</span>
+                        </div>
+                        <div class="rv4-dim-score">
+                            <span class="rv4-score-num">3.87</span>
+                            <span class="rv4-score-max">/ 5</span>
+                        </div>
+                    </div>
+                    <div class="rv4-dim-bar-track">
+                        <div class="rv4-dim-bar-fill coral" style="width: 77.4%;"></div>
+                    </div>
+                </div>
+
+                <!-- Dim 2 -->
+                <div class="rv4-dim-item">
+                    <div class="rv4-dim-header">
+                        <div class="rv4-dim-info">
+                            <span class="rv4-dim-icon">📚</span>
+                            <span class="rv4-dim-name">Academic Impact</span>
+                        </div>
+                        <div class="rv4-dim-score">
+                            <span class="rv4-score-num">3.75</span>
+                            <span class="rv4-score-max">/ 5</span>
+                        </div>
+                    </div>
+                    <div class="rv4-dim-bar-track">
+                        <div class="rv4-dim-bar-fill orange" style="width: 75.0%;"></div>
+                    </div>
+                </div>
+
+                <!-- Dim 3 -->
+                <div class="rv4-dim-item">
+                    <div class="rv4-dim-header">
+                        <div class="rv4-dim-info">
+                            <span class="rv4-dim-icon">🌍</span>
+                            <span class="rv4-dim-name">Social Impact</span>
+                        </div>
+                        <div class="rv4-dim-score">
+                            <span class="rv4-score-num">3.56</span>
+                            <span class="rv4-score-max">/ 5</span>
+                        </div>
+                    </div>
+                    <div class="rv4-dim-bar-track">
+                        <div class="rv4-dim-bar-fill purple" style="width: 71.2%;"></div>
+                    </div>
+                </div>
+
+                <!-- Dim 4 -->
+                <div class="rv4-dim-item">
+                    <div class="rv4-dim-header">
+                        <div class="rv4-dim-info">
+                            <span class="rv4-dim-icon">🎯</span>
+                            <span class="rv4-dim-name">Focus Level</span>
+                        </div>
+                        <div class="rv4-dim-score">
+                            <span class="rv4-score-num">2.48</span>
+                            <span class="rv4-score-max">/ 5</span>
+                        </div>
+                    </div>
+                    <div class="rv4-dim-bar-track">
+                        <div class="rv4-dim-bar-fill blue" style="width: 49.6%;"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Analytical Note -->
+            <div class="rv4-dim-note">
+                <span class="rv4-note-icon">ℹ️</span>
+                <span>Focus items were positively formulated; a higher score indicates stronger concentration and self-regulation.</span>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- =========================================================
+         8. MODEL EVALUATION AND FINAL SELECTION
+    ========================================================= -->
+    <section class="rv4-section-wrap">
+        <div class="rv4-section-header">
+            <span class="rv4-section-eyebrow">BENCHMARKING</span>
+            <h2 class="rv4-section-title">Model Evaluation &amp; Final Selection</h2>
+        </div>
+
+        <!-- 5 Evaluated Models Row -->
+        <div class="rv4-models-chip-row">
+            <span class="rv4-chip-row-label">Evaluated Models:</span>
+            <div class="rv4-model-chip selected">
+                <span class="rv4-check-dot">✓</span>
+                <span>Logistic Regression</span>
+                <span class="rv4-selected-tag">Selected</span>
+            </div>
+            <div class="rv4-model-chip">
+                <span>XGBoost</span>
+            </div>
+            <div class="rv4-model-chip">
+                <span>SVM</span>
+            </div>
+            <div class="rv4-model-chip">
+                <span>Random Forest</span>
+            </div>
+            <div class="rv4-model-chip">
+                <span>KNN</span>
+            </div>
+        </div>
+
+        <!-- 2 Primary Result Cards -->
+        <div class="rv4-two-col-grid rv4-results-metric-grid">
+            <div class="rv4-card rv4-perf-card">
+                <div class="rv4-perf-val">98.89%</div>
+                <div class="rv4-perf-lbl">Logistic Regression Accuracy</div>
+            </div>
+            <div class="rv4-card rv4-perf-card">
+                <div class="rv4-perf-val">96.72%</div>
+                <div class="rv4-perf-lbl">Logistic Regression Macro F1-score</div>
+            </div>
+        </div>
+
+        <!-- Highlighted Conclusion Box -->
+        <div class="rv4-conclusion-box">
+            <div class="rv4-conclusion-icon">🏆</div>
+            <div class="rv4-conclusion-text">
+                <strong>Key Finding:</strong> Logistic Regression achieved the best overall performance among the five evaluated models and was selected for web application integration.
+            </div>
+        </div>
+
+        <!-- ML Comparison Charts -->
+        <div class="rv4-two-col-grid rv4-charts-row">
+            <!-- Left: Accuracy Chart -->
+            <div class="rv4-card rv4-chart-card">
+                <div class="rv4-chart-container">
+                    <img src="{{ url_for('static', filename='images/research/accuracy_comparison.png') }}"
+                         alt="Accuracy Comparison Across Five Machine Learning Models"
+                         loading="lazy">
+                </div>
+                <div class="rv4-figure-caption">
+                    <span class="rv4-caption-tag">Figure 4</span>
+                    <span>Accuracy Comparison Across Five Machine Learning Models</span>
+                </div>
+            </div>
+
+            <!-- Right: Macro F1 Chart -->
+            <div class="rv4-card rv4-chart-card">
+                <div class="rv4-chart-container">
+                    <img src="{{ url_for('static', filename='images/research/macro_f1_comparison.png') }}"
+                         alt="Macro F1 Comparison Across Five Machine Learning Models"
+                         loading="lazy">
+                </div>
+                <div class="rv4-figure-caption">
+                    <span class="rv4-caption-tag">Figure 5</span>
+                    <span>Macro F1 Comparison Across Five Machine Learning Models</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- =========================================================
+         9. PRACTICAL RESEARCH OUTCOME
+    ========================================================= -->
+    <section class="rv4-section-wrap">
+        <div class="rv4-card rv4-outcome-card">
+            <span class="rv4-outcome-eyebrow">DEPLOYMENT &amp; INTEGRATION</span>
+            <h2 class="rv4-outcome-heading">From Research to Practical Application</h2>
+
+            <!-- Visual Flow -->
+            <div class="rv4-outcome-flow">
+                <div class="rv4-flow-node">
+                    <div class="rv4-node-icon">📋</div>
+                    <div class="rv4-node-text">Behavioural Data</div>
+                </div>
+                <div class="rv4-flow-arrow">→</div>
+
+                <div class="rv4-flow-node">
+                    <div class="rv4-node-icon">🧠</div>
+                    <div class="rv4-node-text">Machine Learning</div>
+                </div>
+                <div class="rv4-flow-arrow">→</div>
+
+                <div class="rv4-flow-node">
+                    <div class="rv4-node-icon">📊</div>
+                    <div class="rv4-node-text">Behaviour Prediction</div>
+                </div>
+                <div class="rv4-flow-arrow">→</div>
+
+                <div class="rv4-flow-node highlight">
+                    <div class="rv4-node-icon">🌱</div>
+                    <div class="rv4-node-text">Personalized Guidance</div>
+                </div>
+            </div>
+
+            <!-- 4 Application Prediction Output Badges -->
+            <div class="rv4-outputs-grid">
+                <div class="rv4-output-pill">
+                    <span class="rv4-output-icon">📱</span>
+                    <span>Digital Distraction Level</span>
+                </div>
+                <div class="rv4-output-pill">
+                    <span class="rv4-output-icon">📚</span>
+                    <span>Academic Impact Level</span>
+                </div>
+                <div class="rv4-output-pill">
+                    <span class="rv4-output-icon">🌍</span>
+                    <span>Social Impact Level</span>
+                </div>
+                <div class="rv4-output-pill">
+                    <span class="rv4-output-icon">🎯</span>
+                    <span>Focus Level</span>
+                </div>
+            </div>
+
+            <!-- Description Sentence -->
+            <p class="rv4-outcome-desc">
+                The final Logistic Regression model was integrated into the Flask-based application to provide behavioural predictions, result visualization, prediction history and personalized digital wellness recommendations.
             </p>
 
-
+            <!-- Call to Action Button -->
+            <div class="rv4-outcome-cta">
+                <a href="/" class="topbar-action-btn rv4-cta-btn">
+                    <span>Start New Assessment</span>
+                    <span class="rv4-btn-arrow">→</span>
+                </a>
+            </div>
         </div>
-
-
-
-    </div>
-
-
-
-
-
-
-
-    <!-- PREDICTION DIMENSIONS -->
-
-
-    <h2 class="section-title">
-
-        Behavioural Prediction Dimensions
-
-    </h2>
-
-
-
-    <div class="dimension-grid">
-
-
-
-        <div class="dimension-card">
-
-            <span>
-                📱
-            </span>
-
-            <h3>
-                Digital Distraction Level
-            </h3>
-
-
-            <p>
-                Measures smartphone-related distraction behaviour
-                patterns among students.
-            </p>
-
-
-        </div>
-
-
-
-
-
-        <div class="dimension-card">
-
-            <span>
-                📚
-            </span>
-
-            <h3>
-                Academic Impact Level
-            </h3>
-
-
-            <p>
-                Represents the perceived influence of smartphone usage
-                on academic activities.
-            </p>
-
-
-        </div>
-
-
-
-
-
-
-        <div class="dimension-card">
-
-            <span>
-                🌍
-            </span>
-
-            <h3>
-                Social Impact Level
-            </h3>
-
-
-            <p>
-                Analyses the effect of digital behaviour on social
-                interaction patterns.
-            </p>
-
-
-        </div>
-
-
-
-
-
-
-
-        <div class="dimension-card">
-
-            <span>
-                🎯
-            </span>
-
-            <h3>
-                Focus Level
-            </h3>
-
-
-            <p>
-                Evaluates concentration ability and self-regulation
-                behaviour.
-            </p>
-
-
-        </div>
-
-
-
-
-    </div>
-
-
-
-
-
-
-
-
-    <!-- CONTRIBUTION -->
-
-
-    <div class="research-card contribution">
-
-
-        <div class="card-icon">
-            💡
-        </div>
-
-
-        <h2>
-            Research Contribution
-        </h2>
-
-
-        <p>
-
-            The developed framework integrates behavioural analysis,
-            machine learning prediction and web-based visualization
-            to provide an accessible platform for understanding
-            digital behaviour patterns among university students.
-
-        </p>
-
-
-    </div>
-
-
-
+    </section>
 
 </div>
-
-
-
 {% endblock %}
